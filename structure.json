@@ -1,0 +1,6 @@
+{
+  "items": [
+    { "path": "docker", "title": "Override title of course ONE" },
+    { "path": "itsm-playground" }
+  ]
+}

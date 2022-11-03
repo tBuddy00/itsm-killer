@@ -1,0 +1,8 @@
+{
+  "title": "ITSM Docker",
+  "description": "This course gives a basic introduction about how to work with docker",
+  "items": [
+    { "path": "basics" },
+    { "path": "Building-an-Image" }
+  ]
+}
