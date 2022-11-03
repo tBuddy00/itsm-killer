@@ -1,6 +1,6 @@
 {
-  "title": "Scenario THREE",
-  "description": "This is the description of scenario THREE in course TWO",
+  "title": "ITSM Docker",
+  "description": "This scenarios will give a bit of insight in how to work with docker",
   "details": {
     "intro": {
       "text": "intro.md",
@@ -8,19 +8,19 @@
     },
     "steps": [
       {
-        "title": "Create an empty file",
-        "text": "step1/text.md",
-        "verify": "step1/verify.sh"
+        "title": "Display Version of Docker",
+        "text": "step1_version/text.md",
+        "verify": "step1_version/verify.sh"
       },
       {
         "title": "Create a file with text",
-        "text": "step2/text.md",
-        "verify": "step2/verify.sh"
+        "text": "step2_images/text.md",
+        "verify": "step2_images/verify.sh"
       },
       {
-        "title": "Delete a file",
-        "text": "step3/text.md",
-        "verify": "step3/verify.sh"
+        "title": "Run a Container from an image",
+        "text": "step3_run/text.md",
+        "verify": "step3_run/verify.sh"
       }
     ],
     "finish": {
