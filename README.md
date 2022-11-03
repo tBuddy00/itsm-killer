@@ -1,2 +1,3 @@
-# itsm-killer
-killercoda lab excercise for the itsm course
+# ITSM-LAB
+
+Killercoda lab exercise for the itsm course.
