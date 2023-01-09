@@ -1,49 +1,52 @@
 
 
-# Create simple secret
+# Edit secrets
 
-Run `kubectl get secrets`{{exec}}
+## Previous challenge
 
-kubectl create secret generic db-user-pass \
-    --from-literal=username=admin \
-    --from-literal=password='S!B\*d$zDsb='
+The last challenge was to retrieve the username and password from our first secret. 
 
+We can get the secret's name from `kubectl`
 
+`kubectl get secrets`{{exec}}
 
+There we see the name `app-user-creds`.
 
-## Create secret with files
+Now, we just need to adjust our previously used commands:
 
-kubectl create secret generic db-user-pass \
-    --from-file=username=./username.txt \
-    --from-file=password=./password.txt
+To reveal the `username`, we could use: 
 
+`kubectl get secret app-user-creds -o jsonpath='{.data.username}' | base64 --decode`{{exec}}
 
-Run `kubectl get secrets`{{exec}}
+To reveal the `password`, we could use: 
 
-
-kubectl describe secret db-user-pass
-
-## Retrieve secrets
-
-Run `kubectl get secret db-user-pass -o jsonpath='{.data}'`{{exec}}
+`kubectl get secret app-user-creds -o jsonpath='{.data.password}' | base64 --decode`{{exec}}
 
 
-{"password":"UyFCXCpkJHpEc2I9","username":"YWRtaW4="}
+## Editing a secret
+
+Sometimes we want to change the secret. For example on a time based schedule or if we believe the secret got compromised. 
+
+Let's change the password within our `app-user-creds` secret. 
+
+First we need a new password. Let's generate a new *base64* decoded one
+
+`echo "AnewPassword!" | base64`{{exec}}
+
+As a result, we should get: `QW5ld1Bhc3N3b3JkIQo=`
+
+Now, we can replace the old password using the `kubectl` command again:
+
+`kubectl edit secrets app-user-creds`{{exec}}
+
+This will open the default editor where you can edit the secret. In this case, the editor is `vim`.
+Press `<i>` to enter the *insert mode*. Copy the new base64 encoded password and replace it with the former one. Afterwards, press `<Esc>` to leave the *insert* mode. Finally, leave the editor with `:x`.
+
+> NOTE! In this scenario, the default editor is ***vim***. If you're having trouble working with this tool, consider using the editor **nano**. You can use it by temprarily overwriting the default editor. The command would be `EDITOR=nano kubectl edit secrets app-user-creds`{{exec}}. Make the necessary changes and save them `ctrl+o`. Finally, close the editor with `ctrl+x`. You can see the available commands in the bottom of the editor. 
 
 
+Let's verify that our change worked, by using `kubectl` to decrypt our secret password again:
 
-echo 'UyFCXCpkJHpEc2I9' | base64 --decode
+`kubectl get secret app-user-creds -o jsonpath='{.data.password}' | base64 --decode`{{exec}}
 
-
-
-kubectl get secret db-user-pass -o jsonpath='{.data.password}' | base64 --decode
-
-
-## Edit secrets
-
-kubectl edit secrets <secret-name>
-
-
-## Delete secrets
-
-kubectl delete secret db-user-pass
+We should see our newly set password `AnewPassword!`.

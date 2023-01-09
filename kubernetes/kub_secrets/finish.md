@@ -3,4 +3,5 @@
 
 ### WELL DONE !
 
-You finished this scenario and also should now be familiar with ***Secrets*** in Kubernetes.
+You finished this scenario! 
+With that, you should now be familiar with ***Secrets*** in Kubernetes.

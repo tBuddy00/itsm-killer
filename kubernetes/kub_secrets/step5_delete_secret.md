@@ -1,49 +1,26 @@
 
+## Delete a secret
 
-# Create simple secret
+The final lesson is about deleting a secret. 
 
-Run `kubectl get secrets`{{exec}}
+First let's see which *secrets* we have available:
 
-kubectl create secret generic db-user-pass \
-    --from-literal=username=admin \
-    --from-literal=password='S!B\*d$zDsb='
+`kubectl get secrets`{{exec}}
 
-
-
-
-## Create secret with files
-
-kubectl create secret generic db-user-pass \
-    --from-file=username=./username.txt \
-    --from-file=password=./password.txt
+| NAME            |     TYPE    | DATA  |  AGE  | 
+| --------------- |:-----------:| -----:| -----:|
+| app-user-creds  |  Opaque     |  2    | 14m   |
+| app-file-creds  |  Opaque     |  2    | 40s   |
 
 
-Run `kubectl get secrets`{{exec}}
+Let's delete the *secret* that we created first with the name `app-user-creds`.
 
+Again, we're using `kubectl` for that:
 
-kubectl describe secret db-user-pass
+`kubectl delete secret app-user-creds`{{exec}}
 
-## Retrieve secrets
+With `kubectl delete` we can delete resources from the cluster. 
 
-Run `kubectl get secret db-user-pass -o jsonpath='{.data}'`{{exec}}
+Executing the command, we should get a result message, similar to: *secret "app-user-creds" deleted*
 
-
-{"password":"UyFCXCpkJHpEc2I9","username":"YWRtaW4="}
-
-
-
-echo 'UyFCXCpkJHpEc2I9' | base64 --decode
-
-
-
-kubectl get secret db-user-pass -o jsonpath='{.data.password}' | base64 --decode
-
-
-## Edit secrets
-
-kubectl edit secrets <secret-name>
-
-
-## Delete secrets
-
-kubectl delete secret db-user-pass
+Great!

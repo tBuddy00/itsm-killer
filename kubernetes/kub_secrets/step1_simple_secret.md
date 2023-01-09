@@ -1,49 +1,37 @@
+# Create a simple secret
+
+Secrets are an easy way to manage sensitive data for your deployed application. That means, scoped based *storage* and *access* as well as *editing* of the information. 
+
+> NOTICE!
+> All our resources - now and in the future - are created within the ***default namespace***.
+> Namespaces are a different topic which we will cover at a later stage.
+
+In order see possibly available `secrets` we can utilize `kubectl` again:
+
+Running `kubectl get secrets`{{exec}} displays us all secrets in the current (here *default*) namespace.
+
+Currently, we have no secrets set up, so the response should be: *No resources found in default namespace.*
 
 
-# Create simple secret
+An easy way to create a secret is to use `kubectl create` again with all necessary information provided: 
 
-Run `kubectl get secrets`{{exec}}
+`kubectl create secret generic app-user-creds --from-literal=username=admin --from-literal=password='PWD$from?admin='`{{exec}}
 
-kubectl create secret generic db-user-pass \
-    --from-literal=username=admin \
-    --from-literal=password='S!B\*d$zDsb='
-
+With `kubectl create secret` we create a new resource of type `secret`. Additionally, we set the `type` of secret. Here it is a `generic` one. Checkout the documentation of [secrets](https://kubernetes.io/docs/concepts/configuration/secret/) or use the auto-completion to see the alternatives!
+Finally, for this simple example, we add two entries to that secret. Namely, a *username* `key` with value of *admin* and another `key` with the name *password* and `value` of *PWD$from?admin=*.
 
 
+> NOTICE!
+> On the terminal we have auto-completion for kubectl. After typing "kubectl \<space\>" you can always hit the 'tab' key twice to get possible options for the next term.
 
-## Create secret with files
+We can verify the successful creation by using `kubectl` again:
 
-kubectl create secret generic db-user-pass \
-    --from-file=username=./username.txt \
-    --from-file=password=./password.txt
+`kubectl get secrets`{{exec}}
 
+We should be presented with the following table:
 
-Run `kubectl get secrets`{{exec}}
+| NAME            |     TYPE    | DATA  | AGE  | 
+| --------------- |:-----------:| -----:| ----:|
+| app-user-creds  |  Opaque     |  2    | 3s   |
 
-
-kubectl describe secret db-user-pass
-
-## Retrieve secrets
-
-Run `kubectl get secret db-user-pass -o jsonpath='{.data}'`{{exec}}
-
-
-{"password":"UyFCXCpkJHpEc2I9","username":"YWRtaW4="}
-
-
-
-echo 'UyFCXCpkJHpEc2I9' | base64 --decode
-
-
-
-kubectl get secret db-user-pass -o jsonpath='{.data.password}' | base64 --decode
-
-
-## Edit secrets
-
-kubectl edit secrets <secret-name>
-
-
-## Delete secrets
-
-kubectl delete secret db-user-pass
+We see our secret with name `app-user-creds` and the amount of key entries, which is `2` here.

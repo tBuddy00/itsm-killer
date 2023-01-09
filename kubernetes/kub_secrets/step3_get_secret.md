@@ -1,49 +1,33 @@
+## Retrieve a secret
+
+From our previous scenarios about Kubernetes, we recall that we can access data, using a `jsonpath` query.
+
+Let's try to use that to access one of our secrets.
+
+Executing `kubectl get secret app-file-creds -o jsonpath='{.data}'`{{exec}}
+
+results in
+```
+{
+    "password":"aXRzbV9wYXNzd29yZA==",
+    "username":"aXRzbV91c2Vy"
+}
+```
+
+You might notice, that the values are not the once, we were using when setting up the secret. 
+The reason is, that we get presented with the base64 encoded string of our values.
+
+We can use `jsonpath` and the additional program `base64` to decode the values and reveal the true sensitive data. 
+
+To reveal the `username`, we could use: 
+
+`kubectl get secret app-file-creds -o jsonpath='{.data.username}' | base64 --decode`{{exec}}
+
+To reveal the `password`, we could use: 
+
+`kubectl get secret app-file-creds -o jsonpath='{.data.password}' | base64 --decode`{{exec}}
 
 
-# Create simple secret
+## Challenge
 
-Run `kubectl get secrets`{{exec}}
-
-kubectl create secret generic db-user-pass \
-    --from-literal=username=admin \
-    --from-literal=password='S!B\*d$zDsb='
-
-
-
-
-## Create secret with files
-
-kubectl create secret generic db-user-pass \
-    --from-file=username=./username.txt \
-    --from-file=password=./password.txt
-
-
-Run `kubectl get secrets`{{exec}}
-
-
-kubectl describe secret db-user-pass
-
-## Retrieve secrets
-
-Run `kubectl get secret db-user-pass -o jsonpath='{.data}'`{{exec}}
-
-
-{"password":"UyFCXCpkJHpEc2I9","username":"YWRtaW4="}
-
-
-
-echo 'UyFCXCpkJHpEc2I9' | base64 --decode
-
-
-
-kubectl get secret db-user-pass -o jsonpath='{.data.password}' | base64 --decode
-
-
-## Edit secrets
-
-kubectl edit secrets <secret-name>
-
-
-## Delete secrets
-
-kubectl delete secret db-user-pass
+Try to reveal the secret of our first secret we set up. The one, where we entered the credentials from the terminal.
