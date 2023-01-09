@@ -1,9 +1,9 @@
 # Deletion of a Deployment
 
-* kubectl get deployments
-* kubectl get pods
+* `kubectl get deployments`{{exec}}
+* `kubectl get pods`{{exec}}
 
-* kubectl delete deployment itsm-demo-deployment
+* `kubectl delete deployment itsm-demo-deployment`{{exec}}
 
-* kubectl get deployments
-* kubectl get pods
+* `kubectl get deployments`{{exec}}
+* `kubectl get pods`{{exec}}
