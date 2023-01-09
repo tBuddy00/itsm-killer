@@ -17,7 +17,7 @@
     "assets": {
       "host01": [
         {"file": "itsm_deployment.yaml", "target": "/itsm", "chmod": "+w"},
-        {"file": "itsm_service.yaml", "target": "/itsm", "chmod": "+w"}
+        {"file": "itsm_service.yml", "target": "/itsm", "chmod": "+w"}
       ]
     }
   },
