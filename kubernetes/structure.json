@@ -2,7 +2,7 @@
   "title": "ITSM Kubernetes",
   "description": "This course gives a basic introduction about how to work with kubernetes",
   "items": [
-    { "path": "basics" },
-    { "path": "Building-an-Image" }
+    { "path": "kubernetes-playground" },
+    { "path": "Small Kubernetes Cluster" }
   ]
 }
