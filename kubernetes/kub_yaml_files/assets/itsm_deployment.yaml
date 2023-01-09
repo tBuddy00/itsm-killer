@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - image: docker.io/library/nginx:alpine
-          name: itsm_nginx
+          name: itsm-nginx
           imagePullPolicy: Always
           ports:
             - containerPort: 80
