@@ -7,12 +7,34 @@
     },
     "steps": [
       {
-        "title": "List all pods",
-        "text": "step1.md"
+        "title": "Creating Secrets",
+        "text": "step1_simple_secret.md"
+      },
+      {
+        "title": "Create Secret from File",
+        "text": "step2_secret_fromFile.md"
+      },
+      {
+        "title": "Retrieve Secrets",
+        "text": "step3_get_secret.md"
+      },
+      {
+        "title": "Edit Secrets",
+        "text": "step4_edit_secret.md"
+      },
+      {
+        "title": "Delete Secrets",
+        "text": "step5_delete_secret.md"
       }
     ],
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "pass.txt", "target": "/itsm", "chmod": "+w"},
+        {"file": "user.txt", "target": "/itsm", "chmod": "+w"}
+      ]
     }
   },
   "backend": {

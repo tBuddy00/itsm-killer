@@ -8,10 +8,9 @@ and
 
 Exec `kubectl apply -f /itsm/itsm_deployment.yaml`{{exec}}
 
-`kubectl rollout restart deployment/itsmdeploy`{{exec}}
+`kubectl get deployments`{{exec}}
 
+`kubectl get services`{{exec}}
 
-Challenge: 
-* Create a `itsm_secret.yml` file with content.
-* Retrieve the secret using `kubectl`
+`kubectl rollout restart deployment/demo-deployment`{{exec}}
 

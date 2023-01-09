@@ -9,6 +9,6 @@ spec:
     app: itsm-server
   ports:
     - name: https
-      targetPort: 80  # port the container accepts traffic on
-      port: 8083  # port other pods use to access the Service
+      targetPort: 80
+      port: 8083  
       protocol: TCP
