@@ -8,19 +8,44 @@
     },
     "steps": [
       {
-        "title": "Display Version of Docker",
+        "title": "Running the first command",
         "text": "step1_version/text.md",
         "verify": "step1_version/verify.sh"
       },
       {
-        "title": "Create a file with text",
+        "title": "Local Images",
         "text": "step2_images/text.md",
         "verify": "step2_images/verify.sh"
       },
       {
+        "title": "Pulling docker images",
+        "text": "step3_pull/text.md",
+        "verify": "step3_pull/verify.sh"
+      },
+      {
         "title": "Run a Container from an image",
-        "text": "step3_run/text.md",
-        "verify": "step3_run/verify.sh"
+        "text": "step4_run/text.md",
+        "verify": "step4_run/verify.sh"
+      },
+      {
+        "title": "Status of container",
+        "text": "step5_ps/text.md",
+        "verify": "step5_ps/verify.sh"
+      },
+      {
+        "title": "Start/Stop of container",
+        "text": "step6_start_stop/text.md",
+        "verify": "step6_start_stop/verify.sh"
+      },
+      {
+        "title": "Checking on Container",
+        "text": "step7_logs/text.md",
+        "verify": "step7_logs/verify.sh"
+      },
+      {
+        "title": "Cleaning in docker",
+        "text": "step8_remove/text.md",
+        "verify": "step8_remove/verify.sh"
       }
     ],
     "finish": {
