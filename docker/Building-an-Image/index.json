@@ -1,7 +1,23 @@
 {
-  "title": "Scenario THREE",
+  "title": "Building docker images",
   "description": "This is the description of scenario THREE in course TWO",
   "backend": {
     "imageid": "ubuntu"
+  },
+  "details": {
+    "intro": {
+      "text": "intro.md",
+      "background": "setup.sh"
+    },
+    "steps": [
+      {
+        "title": "Running the first command",
+        "text": "step1_version/text.md",
+        "verify": "step1_version/verify.sh"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
   }
 }
