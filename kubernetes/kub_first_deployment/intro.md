@@ -5,7 +5,7 @@
 
 In this scenario, we're going to make our first `deployment` with `kubectl`.
 
-We're doing this straight on a terminal without additional files. 
+We're doing this straight on a terminal without any additional files. 
 
 You'll learn about:
 * `kubectl cluster-info`
