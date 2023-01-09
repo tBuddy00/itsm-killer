@@ -22,7 +22,7 @@ With that we can run commands within the (running!) container. Again, with the -
 That way, we can for example run a `sh`ell inside the container.
 `docker exec -ti nginx_test sh`{{exec}}.
 
-As in our exercise with ***running containers**, you'll see that the prompt changes. 
+As in our exercise with **running containers**, you'll see that the prompt changes (`# `). 
 You're now inside the container and can inpsect it. 
 
 Enter `exit`{{exec}} to close the shell again. 

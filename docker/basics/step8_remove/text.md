@@ -45,13 +45,13 @@ Besides `images` with older `tags` and unneeded `containers`, there are also spe
 We can use `docker system prune -a` to perform a global cleanup of docker. 
 Docker searches hereby for *inactive* and *unmapped* items and removes these. 
 
-That includes:
+Some of that includes:
 * not running containers
 * docker images where no container exists for it
 * networks which are not associated
 * volumes that are not associated anymore
 
-Run `docker ps`{{exec}} and find all remaining active container. Stop them by using `docker stop`. Finally, run `docker system prune -a`{{exec}} to perform a full cleanup. 
+Run `docker ps`{{exec}} and find all remaining active container. Stop them by using `docker stop`. Finally, run `docker system prune -a`{{exec}} to perform a full cleanup. If asked for confirmation, agree to it with `y` 
 
-Finally, running `docker ps -a` and `docker images` should give you empty tables again.
+Finally, running `docker ps -a`{{exec}} and `docker images`{{exec}} should give you empty tables again.
 

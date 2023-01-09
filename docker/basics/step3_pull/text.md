@@ -19,4 +19,4 @@ As default `:latest` is used. Otherwise you can use [hub.docker.com](https://hub
 Summarizing, to download our wanted nginx image, we can use the command
 `docker pull nginx:latest`{{exec}}
 
-To verify the successful download, we can run `docker images` and should see the nginx image.
+To verify the successful download, we can run `docker images`{{exec}} and should see the nginx image.
