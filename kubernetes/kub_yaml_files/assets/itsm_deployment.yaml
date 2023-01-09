@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: itsm-server
+  name: demo-deployment
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: itsm-server
+    spec:
+      containers:
+        - image: docker.io/library/nginx:alpine
+          name: itsm_nginx
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80
+              protocol: TCP
+  selector:
+    matchLabels:
+      app: itsm-server
+

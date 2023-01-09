@@ -1,8 +1,11 @@
 {
   "title": "ITSM Kubernetes",
-  "description": "This course gives a basic introduction about how to work with kubernetes",
+  "description": "This course gives a basic introduction on how to work with kubernetes",
   "items": [
     { "path": "kubernetes-playground" },
-    { "path": "Small Kubernetes Cluster" }
+    { "path": "kub_first_deployment" },
+    { "path": "kub_first_service" },
+    { "path": "kub_secrets" },
+    { "path": "kub_yaml_files" }
   ]
 }

@@ -1,14 +1,14 @@
 {
-  "title": "Kubernetes Playground",
-  "description": "A simple one node Kubernetes cluster for you to play around!",
+  "title": "Working with Secrets",
+  "description": "In this scenario, we're taking a look at kube secrets.",
   "details": {
     "intro": {
       "text": "intro.md"
     },
     "steps": [
       {
-        "title": "1-Node Playground",
-        "text": "step1_playground.md"
+        "title": "List all pods",
+        "text": "step1.md"
       }
     ],
     "finish": {

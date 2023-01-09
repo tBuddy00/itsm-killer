@@ -1,0 +1,33 @@
+{
+  "title": "Creating a Deployment",
+  "description": "In this scenario, we're creating a kubernetes deployment using kubectl",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "Kubernetes Cluster",
+        "text": "step1_check_cluster.md"
+      },
+      {
+        "title": "Create Deployment",
+        "text": "step2_create_deployment.md"
+      },
+      {
+        "title": "Scale Deployment",
+        "text": "step3_scale.md"
+      },
+      {
+        "title": "Delete Deployment",
+        "text": "step4_delete.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Working with yaml files",
+  "description": "In this scenario, we make use of yaml files.",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "List all pods",
+        "text": "step1_usingYAML.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "itsm_deployment.yaml", "target": "/itsm", "chmod": "+w"},
+        {"file": "itsm_service.yaml", "target": "/itsm", "chmod": "+w"}
+      ]
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "title": "Creating a Service",
+  "description": "In this scenario, we're creating a kubernetes service for a deployment",
+  "details": {
+    "intro": {
+      "text": "intro.md"
+    },
+    "steps": [
+      {
+        "title": "Making a new deployment",
+        "text": "step1_make_deployment.md"
+      },
+      {
+        "title": "Exposing the Deployment",
+        "text": "step2_exposing.md"
+      }
+    ],
+    "finish": {
+      "text": "finish.md"
+    }
+  },
+  "backend": {
+    "imageid": "kubernetes-kubeadm-1node"
+  }
+}

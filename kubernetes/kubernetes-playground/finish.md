@@ -1,6 +1,6 @@
 
 <br>
 
-### WELL DONE !
+### Success !
 
-Session is over!
+You're done!

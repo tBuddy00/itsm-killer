@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-proxy
+  labels:
+    app: itsm-server
+spec:
+  selector:
+    app: itsm-server
+  ports:
+    - name: https
+      targetPort: 80  # port the container accepts traffic on
+      port: 8083  # port other pods use to access the Service
+      protocol: TCP
