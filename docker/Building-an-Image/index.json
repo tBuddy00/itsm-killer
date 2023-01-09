@@ -1,6 +1,6 @@
 {
   "title": "Building docker images",
-  "description": "This is the description of scenario THREE in course TWO",
+  "description": "This scenario is about Building your own docker images.",
   "backend": {
     "imageid": "ubuntu"
   },
