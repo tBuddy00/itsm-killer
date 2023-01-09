@@ -15,3 +15,7 @@ NAME                                    READY   STATUS    RESTARTS   AGE   IP   
 itsm-demo-deployment-57c54b7ff9-j88v9   1/1     Running   0          13s   192.168.0.11   controlplane   <none>           <none>
 itsm-demo-deployment-57c54b7ff9-nsvq4   1/1     Running   0          13s   192.168.0.13   controlplane   <none>           <none>
 itsm-demo-deployment-57c54b7ff9-tkzsp   1/1     Running   0          13s   192.168.0.12   controlplane   <none>           <none>
+
+* `export DIPS=$(kubectl get pods -o jsonpath='{.items[*].status.podIP}');echo $DIPS`{{exec}}
+
+* `curl $DIPS`{{exec}}
