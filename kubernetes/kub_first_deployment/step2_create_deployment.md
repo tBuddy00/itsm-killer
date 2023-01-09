@@ -11,6 +11,6 @@
 
 	NAME                                    READY   STATUS    RESTARTS   AGE
 	itsm-demo-deployment-57c54b7ff9-qds7m    1/1     Running   0          86s
-	
-* > export DPIP=`kubectl describe pods | grep "IP:" | tail -n 1 | cut -d " " -f14\`;echo $DPIP
+
+* `export DPIP=$(kubectl describe pods | grep "IP:" | tail -n 1 | cut -d " " -f14);echo $DPIP`{{exec}}
 * `curl $DPIP`{{exec}}
