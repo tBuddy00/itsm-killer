@@ -1,12 +1,14 @@
 # Creating our first Deployment
 
-It's time rollout our first application to the cluster. For this, we will create a **deployment**. As an example we'll use our trusted `nginx:alpine` image again.
+It's time rollout our first application to the cluster. For this, we will create a **deployment**. A *deployment* is a kind of [object](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/) from Kubernetes. Kubernetes has several `kind` and we will cover some of them in this and future scenarios.
+
+As for this example, we'll use our trusted `nginx:alpine` image again.
 
 To create a new deployment, we run the following command:
 
 `kubectl create deployment itsm-demo-deployment --image=nginx:alpine`{{exec}}
 
-Again, we're using `kubectl` to interact with our cluster. With `create`, we express our wish to create a new resource, followed by the term `deployment` which describes the specific kind. Next up, we declare the name of our deployment. In this case it's `itsm-demo-deployment`. Finally, we set the docker image to be used (`--image=`). In out case this will be `nginx` in the `alpine` version. This is mainly due to the reduced image size.
+Again, we're using `kubectl` to interact with our cluster. With `create`, we express our wish to create a new object, followed by the term `deployment` which describes the specific kind. Next up, we declare the name of our deployment. In this case it's `itsm-demo-deployment`. Finally, we set the docker image to be used (`--image=`). In out case this will be `nginx` in the `alpine` version. This is mainly due to the reduced image size.
 
 Executing the command, we should get a similiar response to the following:
 ```
@@ -22,7 +24,7 @@ We can check on our deployment, by executing `kubectl get deployments`{{exec}}.
 The command lists all our deployments. 
 
 > NOTICE!
-> All our resources - now and in the future - are created within the ***default namespace***.
+> All our objects - now and in the future - are created within the ***default namespace***.
 > Namespaces are a different topic which we will cover at a later stage.
 
 From the table we can see that we have our deployment successfully running on one pod.

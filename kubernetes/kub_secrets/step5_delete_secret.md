@@ -19,7 +19,7 @@ Again, we're using `kubectl` for that:
 
 `kubectl delete secret app-user-creds`{{exec}}
 
-With `kubectl delete` we can delete resources from the cluster. 
+With `kubectl delete` we can delete objects from the cluster. 
 
 Executing the command, we should get a result message, similar to: *secret "app-user-creds" deleted*
 
