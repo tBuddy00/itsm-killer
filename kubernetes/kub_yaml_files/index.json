@@ -7,8 +7,24 @@
     },
     "steps": [
       {
-        "title": "List all pods",
-        "text": "step1_usingYAML.md"
+        "title": "YAML Files in Kubernetes",
+        "text": "step1_findFiles"
+      },
+      {
+        "title": "Reading a Service YAML",
+        "text": "step2_readService.md"
+      },
+      {
+        "title": "Reading a Deployment YAML",
+        "text": "step3_readDeployment.md"
+      },
+      {
+        "title": "Applying YAML",
+        "text": "step4_ApplyFiles.md"
+      },
+      {
+        "title": "Changing Configuration",
+        "text": "step5_adjustingYAML.md"
       }
     ],
     "finish": {

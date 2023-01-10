@@ -3,7 +3,7 @@
 
 ### Deployment to Kubernetes using YAML files!
 
-In this scenario, we're going to deploy yet again our nginx application.
-But this time, we're using files in which we describe our setup. 
+In this scenario, we're going to deploy a nginx web server.
+This time, we'll be using files in which we describe our setup. 
 
 
