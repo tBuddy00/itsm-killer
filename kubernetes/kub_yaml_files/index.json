@@ -8,7 +8,7 @@
     "steps": [
       {
         "title": "YAML Files in Kubernetes",
-        "text": "step1_findFiles"
+        "text": "step1_findFiles.md"
       },
       {
         "title": "Reading a Service YAML",
