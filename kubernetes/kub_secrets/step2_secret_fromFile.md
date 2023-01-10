@@ -20,7 +20,7 @@ We find the files `user.txt` and `pass.txt`, both containing the values for our 
 
 Let's adjust our previous secret generation command, to make use of these files:
 
-`kubectl create secret generic app-file-creds --from-file=username=./user.txt --from-file=password=./pass.txt'`{{exec}}
+`kubectl create secret generic app-file-creds --from-file=username=./user.txt --from-file=password=./pass.txt`{{exec}}
 
 We should get *secret/app-file-creds created* as a response.
 

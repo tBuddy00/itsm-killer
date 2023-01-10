@@ -1,6 +1,6 @@
 {
   "title": "ITSM Kubernetes",
-  "description": "This course gives a basic introduction on how to work with kubernetes",
+  "description": "This course gives a basic introduction on how to work with Kubernetes",
   "items": [
     { "path": "kubernetes-playground" },
     { "path": "kub_first_deployment" },

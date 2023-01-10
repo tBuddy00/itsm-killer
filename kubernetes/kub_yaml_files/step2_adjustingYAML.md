@@ -12,7 +12,7 @@
 
 `kubectl get services`{{exec}}
 
-Challenge: 
+## Challenge 
 * Create a `itsm_secret.yml` file with content.
 * Retrieve the secret using `kubectl`
 

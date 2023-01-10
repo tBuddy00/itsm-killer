@@ -14,7 +14,7 @@ results in
 }
 ```
 
-You might notice, that the values are not the once, we were using when setting up the secret. 
+You might notice, that the values are not the ones, we were using when setting up the secret. 
 The reason is, that we get presented with the base64 encoded string of our values.
 
 We can use `jsonpath` and the additional program `base64` to decode the values and reveal the true sensitive data. 
