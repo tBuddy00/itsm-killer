@@ -1,6 +1,6 @@
 # Creating our first Deployment
 
-It's time rollout our first application to the cluster. For this, we will create a **deployment**. A *deployment* is a kind of [object](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/) from Kubernetes. Kubernetes has several `kind` and we will cover some of them in this and future scenarios.
+It's time rollout our first application to the cluster. For this, we will create a **deployment**. A *deployment* is a `kind` of [object](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/) from Kubernetes. Kubernetes has several `kind` and we will cover some of them in this and future scenarios.
 
 As for this example, we'll use our trusted `nginx:alpine` image again.
 

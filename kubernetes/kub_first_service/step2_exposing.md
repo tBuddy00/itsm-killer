@@ -10,7 +10,7 @@ You'll see a table like the following:
 
 | NAME        |     TYPE    | CLUSTER-IP  | EXTERNAL-IP | PORT(S)  | AGE | 
 | ----------- |:-----------:| -----------:| :-----------| --------:| ---:|
-| kubernetes  |  ClusterIP  |  10.xx.0.1  | \<none\>           |  443/TCP | 18d |
+| kubernetes  |  ClusterIP  |  10.xx.0.1  | \<none\>    |  443/TCP | 18d |
 
 Here you can see one already existing service called *kubernetes*, its *type*, the *IP* and *Port*.
 
@@ -31,7 +31,7 @@ We can verify the successful creation of our service again by using `kubectl`:
 | NAME        |     TYPE    | CLUSTER-IP  | EXTERNAL-IP | PORT(S)  | AGE | 
 | ----------- |:-----------:| -----------:| :-----------| --------:| ---:|
 | kubernetes  |  ClusterIP  |  10.xx.0.1  | \<none\>           |  443/TCP | 18d |
-| webshop-srv  |  ClusterIP  |  *10.xxx.xxx.xxx*  | \<none\>           |  8080/TCP | 8s |
+| webshop-srv  |  ClusterIP  |  *10.xxx.xxx.xxx*  | \<none\>   |  8080/TCP | 8s |
 
 Note that the Port for our service is *8080/TCP*.
 
