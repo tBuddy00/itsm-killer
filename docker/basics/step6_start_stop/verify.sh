@@ -4,7 +4,7 @@
 
 # Prüfen, ob der Befehl ausgeführt wurde
 if ! history | grep -q "docker inspect nginx_test | grep "IPAddress""; then
-    echo "Error: 'docker inspect nginx_test | grep "IPAddress""
+    echo "Error: 'docker inspect nginx_test | grep "IPAddress"' has not been executed."
     exit 1
 fi
 

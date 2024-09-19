@@ -25,14 +25,14 @@ fi
 
 # Prüfen, ob der Befehl ausgeführt wurde
 if ! history | grep -q "docker run -it --rm python:3-alpine python -c "print('hello');""; then
-    echo "Error: "docker run -it --rm python:3-alpine python -c "print('hello');"" has not been executed."
+    echo "Error: "'docker run -it --rm python:3-alpine python -c "print('hello');'" has not been executed."
     exit 1
 fi
 
 
 # Prüfen, ob der Befehl ausgeführt wurde
 if ! history | grep -q "docker run -d --rm python:3-alpine python -c "print('hello');""; then
-    echo "Error: "docker run -d --rm python:3-alpine python -c "print('hello');"" has not been executed."
+    echo "Error: "'docker run -d --rm python:3-alpine python -c "print('hello');'" has not been executed."
     exit 1
 fi
 
