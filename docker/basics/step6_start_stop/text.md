@@ -1,29 +1,46 @@
 # Starting and Stopping existing container
 
-In the last exercise, the challenge was to run a detached container from a `nginx:latest` image with the name `nginx_test`. One way, how the command could look like would be:
+In the last exercise, the challenge was to run a detached container from the `nginx:latest` image with the name *nginx_test*. One possible way to do this would be with the following command:
+
 `docker run -d --name nginx_test -p 8000:80 nginx:latest`{{exec}}
 
-One new thing here is the `-p 8000:80` flag. With that, we perform a *port forwarding*, saying that we map the container port 80 (where nginx works on) to our host system on port 8000. In short this means: `-p [hostport]:[containerport]`.
+A new part of this command is the `-p` 8000:80 flag, which sets up *port forwarding*. This maps port 80 inside the container (where nginx serves content) to port 8000 on our host machine. In simple terms, the format is: `-p [hostport]:[containerport]`.
 
-Using `docker ps`{{exec}}, we should see that the container is actively running.
+After running the command, use docker `ps`{{exec}} to check if the container is actively running.
 
-We can even check out the default page of the web server. To find the IP address, the container is associated with, we can run: `docker inspect nginx_test | grep "IPAddress"`{{exec}}. 
-`docker inspect` gives you many details about your container; with the `grep` we try to find the IP.
-The output should be something like:
+Now, let’s explore the default page of the web server! To find the IP address associated with the container, we can run:
+
+`docker inspect nginx_test | grep "IPAddress"`{{exec}}.
+
+The docker `inspect` command gives us detailed information about the container, and with `grep`, we filter out the specific IP address. The output should look something like this:
+
 ```
 "SecondaryIPAddresses": null,
             "IPAddress": "172.17.0.2",
                     "IPAddress": "172.17.0.2",
 ```
 
-With the IP address, we can now access the content from the terminal with:
+With this IP address, we can access the content directly from the terminal using:
+
 `curl 172.17.0.2`{{exec}}
 
-Alternatively, through the port mapping we should also be able to access the default page using our localhost address and the *hostport* `8000`. 
+Alternatively, since we set up port forwarding, we can also access the default nginx page using our localhost and the *hostport* `8000`:
+
 `curl 127.0.0.1:8000`{{exec}}
 
-We can *stop* and *start* our nginx container using `docker stop <container name>` and `docker start <container name>`. To verify the status, we can still use `docker ps -a`{{exec}}.
+If we want to stop or start the nginx container, we can use:
 
-So, `docker stop nginx_test`{{exec}} should stop the container. Verify the command with `docker ps -a`{{exec}}.
+* `docker stop <container name>` to stop the container.
+* `docker start <container name>` to start the container again.
 
-To restart the container, use `docker start nginx_test`{{exec}}. Verify the successfully started container by using `docker ps`{{exec}} again. You can also `curl` the default web page again. 
+For example, to stop our nginx container, run:
+
+`docker stop nginx_test`{{exec}}
+
+You can verify that the container has stopped by running `docker ps -a`{{exec}}.
+
+To restart the container, simply use `docker start nginx_test`{{exec}}.
+
+Then, check if it’s running again by using `docker ps`{{exec}}. You can also use `curl` to access the default nginx page once more!
+
+Please make sure to run `docker inspect nginx_test | grep "IPAddress"`{{exec}}, `curl 172.17.0.2`{{exec}} and `docker stop nginx_test`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.

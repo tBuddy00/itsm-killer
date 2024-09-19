@@ -1,14 +1,17 @@
 # Running the first docker commands
 
-We won't cover the "How To install" of Docker here. For more information you can visit the 
-[docker manual](https://docs.docker.com/engine/install/) to check how to install the software under
-Linux, Mac, and Windows.
+We won’t be covering Docker installation details here. For a comprehensive guide on how to install Docker on Linux, Mac, or Windows, please refer to the[Docker Manual](https://docs.docker.com/engine/install/).
 
-As first step we're going to check if docker is available
-* docker &rarr; list of commands
-* docker version &rarr; check current version
+For our first step, we’ll check if Docker is available:
 
-Running just `docker`{{exec}} gives us an indication if docker is installed as well as the commands available. 
+* docker &rarr; This will list the available commands.
+* docker version &rarr; This will show the current version of Docker.
 
-Running `docker --version`{{exec}} gives us the current version of the installed docker software.
-This is helpful to get an idea about which commands are available as well as if we're running a more recent version.
+Running `docker`{{exec}} will give us an overview of the commands you can use, indicating that Docker is installed.
+
+Running `docker --version`{{exec}} will provide the version of Docker you have installed. This helps ensure that you’re aware of the available commands and whether you’re using a recent version.
+
+Please make sure to run `docker`{{exec}} and `docker --version`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.
+
+
+

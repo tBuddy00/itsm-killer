@@ -1,10 +1,19 @@
 # Checking for local images
 
-So far we know, that we got `images` and `containers`. Containers are instances from images.
+So far, we know that we work with images and containers. Containers are essentially instances created from images.
 
-Running `docker images`{{exec}} gives us a list of all locally available images.
+Running `docker images`{{exec}} (or `docker images ls`) will provide you with a list of all images available locally on your system.
 
-The result gives us an **empty table**. But we can see that our images will be listed with image name under the *Repository* column, the image tag under the *TAG*, the specific image identifier under *Image ID* the time when the image was created under *Created* and finally the image size under *SIZE*. 
+Initially, you might see an empty table. Once you have images, they will be listed with the following details:
 
+* Repository: The name of the image.
+* TAG: The image tag.
+* Image ID: A unique identifier for the image.
+* Created: The time when the image was created.
+* SIZE: The size of the image.
 
-Note that the image size can vary drastically. Just to give an idea, the range can reach from around `25MB` to over `10GB`. 
+Just a heads-up: image sizes can vary widely. They can range from around 25MB to over 10GB, depending on the contents of the image.
+
+Please make sure to run `docker images`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.
+
+Feel free to explore and let us know if you have any questions!
