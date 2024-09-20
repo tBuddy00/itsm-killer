@@ -17,3 +17,6 @@ Just a heads-up: image sizes can vary widely. They can range from around 25MB to
 Please make sure to run `docker images`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.
 
 Feel free to explore and let us know if you have any questions!
+
+
+
