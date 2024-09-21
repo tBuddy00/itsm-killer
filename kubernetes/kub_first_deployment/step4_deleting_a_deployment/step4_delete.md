@@ -1,4 +1,4 @@
-# Deleting a Deployment
+# Delete a Deployment
 
 **We're almost there!**
 
