@@ -3,19 +3,19 @@
 
 ### Kubernetes Deployments
 
-In this scenario, we're going to make our first `deployment` with `kubectl`.
+In this scenario, we’ll be making our first `deployment` using `kubectl`!
 
-We're doing this straight on a terminal without any additional files. 
+We’ll keep things simple by working directly from the terminal, without any extra configuration files.
 
-You'll learn about:
-* `kubectl cluster-info`
-* `kubectl get nodes`
-* `kubectl create deployment`
-* `kubectl get deployment(s)`
-* `kubectl get pods`
-* `kubectl describe pods`
-* `kubectl scale`
-* `kubectl delete`
+In this session, you’ll explore the following commands:
 
+* `kubectl cluster-info` – Check cluster information.
+* `kubectl get nodes` – View your nodes.
+* `kubectl create deployment` – Create a new deployment.
+* `kubectl get deployment(s)` – Check your deployments.
+* `kubectl get pods` – See the running pods.
+* `kubectl describe pods` – Get detailed information about your pods.
+* `kubectl scale` – Scale your deployments.
+* `kubectl delete` – Remove resources.
 
-
+Let’s get started!
