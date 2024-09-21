@@ -8,11 +8,13 @@
     "steps": [
       {
         "title": "Making a new deployment",
-        "text": "step1_make_deployment.md"
+        "text": "step1_make_deployment.md",
+        "verify":"step1_make_deployment/verify.sh"
       },
       {
         "title": "Exposing the Deployment",
-        "text": "step2_exposing.md"
+        "text": "step2_exposing.md",
+        "verify":"step2_exposing/verify.sh"
       }
     ],
     "finish": {
