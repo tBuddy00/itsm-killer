@@ -1,10 +1,10 @@
-# Deletion of a Deployment
+# Deleting a Deployment
 
-We're almost there. So far, we have seen how to check for our *cluster access*, create a *new deployment*, *scale-*, and how to *retrieve information* about our deployment.
+**We're almost there!**
 
-As a last step, we want to see how we can remove our deployment from the cluster. 
+So far, we’ve covered how to verify our *cluster access*, create a *new deployment*, *scale it up*, and *retrieve information* about our deployment. Now, as a final step, let’s learn how to clean up by removing the deployment from our cluster.
 
-First, let's check if our deployment is still there:
+First, let’s check if our deployment is still active:
 
 `kubectl get deployments`{{exec}}
 
@@ -20,13 +20,11 @@ First, let's check if our deployment is still there:
 | itsm-demo-deployment-xxxxxxxxxx-**xxxxx**   |  1/1  | Running | 0        |  26m | 
 | itsm-demo-deployment-xxxxxxxxxx-**xxxxz**   |  1/1  | Running | 0        |  13s | 
 
-
-In order to remove our deployment, we can simply call `kubectl delete deployment <name>`.
-In our case this would be:
+To remove the deployment, simply run the following command:
 
 `kubectl delete deployment itsm-demo-deployment`{{exec}}
 
-Let's verify the result.
+Now, let's verify that it has been successfully deleted:
 
 `kubectl get deployments`{{exec}}
 
@@ -38,5 +36,6 @@ Let's verify the result.
 | NAME                                    | READY | STATUS  | RESTARTS |  AGE | 
 | --------------------------------------- |:-----:| -------:| :--------| :---:| 
 
-Executing both, `kubectl get deployments` and `kubectl get pods` should return empty tables.
-In case you find `kubectl get pods` still returning some pods, just wait a bit and enter the command again.
+Both `kubectl get deployments` and `kubectl get pods` should return **empty** tables. If you still see some pods, give it a moment and try again—those pods should disappear shortly.
+
+Please make sure to run `kubectl get deployments`{{exec}}, `kubectl get pods`{{exec}} and `kubectl delete deployment itsm-demo-deployment`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.
