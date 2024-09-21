@@ -10,5 +10,6 @@ if ! history | grep -q "kubectl get nodes"; then
     exit 1
 fi
 
+
 #Sobald beide Befehle ausgeführt wurden
 exit 0
