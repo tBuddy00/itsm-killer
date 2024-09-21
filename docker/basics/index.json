@@ -1,6 +1,6 @@
 {
   "title": "ITSM Docker",
-  "description": "This scenarios will give a bit of insight in how to work with docker",
+  "description": "This scenarios will give a bit of insight in how to work with Docker",
   "details": {
     "intro": {
       "text": "intro.md",
