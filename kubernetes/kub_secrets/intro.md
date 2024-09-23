@@ -1,8 +1,7 @@
-
 <br>
 
 ### Working with Secrets in Kubernetes
 
-In this scenario, we will look at ***one way*** on how to deal with sensitive data in the Kubernetes universe - **secrets**.
+In this scenario, we’ll explore **one approach** to handling sensitive data within the world of Kubernetes—using **Secrets**.
 
 
