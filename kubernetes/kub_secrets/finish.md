@@ -1,7 +1,7 @@
-
 <br>
 
-### WELL DONE !
+### Congratulations, you've completed this scenario!
 
-You finished this scenario! 
-With that, you should now be familiar with ***Secrets*** in Kubernetes.
+Now you should have a solid understanding of how to work with Secrets in Kubernetes. 
+
+Well done! 🎉
