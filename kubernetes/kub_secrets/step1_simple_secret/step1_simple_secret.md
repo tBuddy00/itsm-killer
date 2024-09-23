@@ -24,7 +24,7 @@ Here’s what the command does:
 
 * `kubectl create secret`: creates a new secret object
 
-* We specify the type as *generic*, which is commonly used for key-value pairs. You can explore other types by checking the [secrets documentation](https://kubernetes.io/docs/concepts/configuration/secret/) or using terminal auto-completion.
+* We specify the type as *generic*, which is commonly used for key-value pairs. You can explore other types by checking the [Kubernetes Documentation | Secrets](https://kubernetes.io/docs/concepts/configuration/secret/) or using terminal auto-completion.
 
 * We add two key-value pairs: a *username* with the value of *admin* and a *password* with the value of *PWD$from?admin=*.
 
