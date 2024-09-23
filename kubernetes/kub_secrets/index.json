@@ -8,23 +8,28 @@
     "steps": [
       {
         "title": "Creating Secrets",
-        "text": "step1_simple_secret.md"
+        "text": "step1_simple_secret.md",
+        "verify":"step1_simple_secret/verify.sh"
       },
       {
         "title": "Create Secret from File",
-        "text": "step2_secret_fromFile.md"
+        "text": "step2_secret_fromFile.md",
+        "verify":"step2_secret_fromFile/verify.sh"
       },
       {
         "title": "Retrieve Secrets",
-        "text": "step3_get_secret.md"
+        "text": "step3_get_secret.md",
+        "verify":"step3_get_secret/verify.sh"
       },
       {
         "title": "Edit Secrets",
-        "text": "step4_edit_secret.md"
+        "text": "step4_edit_secret.md",
+        "verify":"step4_edit_secret/verify.sh"
       },
       {
         "title": "Delete Secrets",
-        "text": "step5_delete_secret.md"
+        "text": "step5_delete_secret.md",
+        "verify":"step5_delete_secret/verify.sh"
       }
     ],
     "finish": {
