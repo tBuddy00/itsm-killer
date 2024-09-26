@@ -1,0 +1,10 @@
+{
+    "title": "ITSM Git",
+    "description": "This course gives a basic introduction on how to work with Git.",
+    "items": [
+      { "path": "git-basics" },
+      { "path": "git-merge-conflict" },
+      { "path": "git-rebase-merge" }
+      
+    ]
+}
