@@ -1,6 +1,6 @@
 # Git Basics  
 
-Welcome to **Git Basics**! This section is designed for beginners and will introduce you to the foundational concepts and commands of Git. By the end of this part, you’ll understand how to create a Git repository, track changes, commit your work, and manage branches—all essential skills for using Git effectively in your projects.
+Welcome to **Git Basics**! This section is designed for beginners and will introduce you to the foundational concepts and commands of Git. By the end of this part, you’ll understand how to *create* a Git repository, *track* changes, *commit* your work, and *manage* branches—all essential skills for using Git effectively in your projects.
 
 **Goals:**
 
@@ -35,6 +35,5 @@ And now: Run this commands, to set your personal informations:
 `git config --global user.email "userone.email@example.com"`{{exec}}
 
 The `git config --list`{{exec}} command allows you to review the configuration to ensure that everything is set correctly.
-
 
 Please make sure to run `git --version`{{exec}}, `git config --global user.name "userOne"`{{exec}}, `git config --global user.email "userone.email@example.com"`{{exec}} and `git config --list`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.
