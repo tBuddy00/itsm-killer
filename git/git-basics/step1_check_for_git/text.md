@@ -1,21 +1,40 @@
-# Install Git (if not already installed) 
+# Git Basics  
 
-Before we start using Git, make sure Git is installed on your computer. You can download it from [git-scm.com](https://git-scm.com).
+Welcome to **Git Basics**! This section is designed for beginners and will introduce you to the foundational concepts and commands of Git. By the end of this part, you’ll understand how to create a Git repository, track changes, commit your work, and manage branches—all essential skills for using Git effectively in your projects.
 
-Run the following command to verify the installation:
+**Goals:**
 
-`git --version`{{exec}}
+* Understand how to initialize a Git repository
 
-If Git is installed correctly, it will show the installed version.
+* Learn how to track changes and commit them
+
+* Work with branches to manage different versions of your code
+
+* Push your code to a remote repository (like GitHub)
+
+Before we can start using Git, we need to install it on your machine: [git-scm.com](https://git-scm.com). Git is a **version control system**, and it needs to be set up locally so you can track changes to your files, create branches, and collaborate with others.
+
+**Why install Git?**
+
+* Git is necessary for you to manage the history of changes to your code, create branches to experiment with new features, and share your work with others via remote repositories like [GitHub](https://github.com).
+
+* Running `git --version`{{exec}} ensures that Git is installed correctly and tells you which version you have.
 
 ## Configure Git
 
-Before using Git, you need to set your username and email, which will be attached to your commits. Run the following commands:
+Before you start making commits (saving versions of your code), Git needs to know who you are. This information will be attached to every commit you make so that other developers can see who made specific changes
 
-`git config --global user.name "Your Name"`{{exec}}
+**Why set up user information?**
 
-`git config --global user.email "your.email@example.com"`{{exec}}
+* Every *commit* in Git contains metadata, including the *author’s name* and *email*. By setting this information globally using the `git config --global command`, all your commits will be properly attributed to you. This is especially important in team environments where multiple developers are working together
 
-You can check your configuration with:
+And now: Run this commands, to set your personal informations:  
 
-`git config --list`{{exec}}
+`git config --global user.name "userOne"`{{exec}} 
+
+`git config --global user.email "userone.email@example.com"`{{exec}}
+
+The `git config --list`{{exec}} command allows you to review the configuration to ensure that everything is set correctly.
+
+
+Please make sure to run `git --version`{{exec}}, `git config --global user.name "userOne"`{{exec}}, `git config --global user.email "userone.email@example.com"`{{exec}} and `git config --list`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.
