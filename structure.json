@@ -1,6 +1,7 @@
 {
   "items": [
     { "path": "docker", "title": "ITSM Docker Supplemental" },
-    { "path": "kubernetes", "title": "ITSM Kubernetes" }
+    { "path": "kubernetes", "title": "ITSM Kubernetes" },
+    { "path": "git-basics", "title": "ITSM Git" }
   ]
 }
