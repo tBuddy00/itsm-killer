@@ -24,4 +24,7 @@ Finally: Using `git commit -m "Add hello.txt file`{{exec}} is saving the current
 
 Running `git log`{{exec}} shows the **history of commits** in your repository, providing you with details like the *commit message*, the *author*, and a unique commit hash.
 
+
+>NOTE! Git's key strength is tracking the history of changes. By adding and committing files, you’re creating a permanent record of changes that you can review, revert, or share with others. This helps ensure that you never lose your work and can collaborate more effectively.
+
 Please make sure to run `echo "Hello Git, my dear friend!" > hello.txt`{{exec}}, `git add hello.txt`{{exec}} and `git commit -m "Add hello.txt file`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.
