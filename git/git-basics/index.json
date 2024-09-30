@@ -1,0 +1,49 @@
+{
+    "title": "ITSM Git",
+    "description": "This scenarios will give a bit of insight in how to work with Git",
+    "details": {
+      "intro": {
+        "text": "intro.md"
+        
+      },
+      "steps": [
+        {
+          "title": "Check for Git",
+          "text": "step1_check_for_git/text.md",
+          "verify": "step1_check_for_git/verify.sh"
+        },
+        {
+          "title": "Create Git Repository",
+          "text": "step2_create_repo/text.md",
+          "verify": "step2_create_repo/verify.sh"
+        },
+        {
+          "title": "Adding a File to your Repository",
+          "text": "step3_adding_file/text.md",
+          "verify": "step3_adding_file/verify.sh"
+        },
+        {
+          "title": "Git Branch",
+          "text": "step4_branch/text.md",
+          "verify": "step4_branch/verify.sh"
+        },
+        {
+          "title": "Making Changes on Branch",
+          "text": "step5_making_changes_on_branch/text.md",
+          "verify": "step5_making_changes_on_branch/verify.sh"
+        },
+        {
+          "title": "Git Merge",
+          "text": "step6_merge/text.md",
+          "verify": "step6_merge/verify.sh"
+        }
+        
+      ],
+      "finish": {
+        "text": "finish.md"
+      }
+    }
+
+    
+  }
+  
