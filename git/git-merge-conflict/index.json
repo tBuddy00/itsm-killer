@@ -1,0 +1,29 @@
+{
+    "title": "ITSM Git Merge Conflict",
+    "description": "This scenarios will give a bit of insight in how to work with Git",
+    "details": {
+      "intro": {
+        "text": "intro.md"
+        
+      },
+      "steps": [
+        {
+          "title": "Git Merge Conflict: What It Is and How to Resolve It (Preparation)",
+          "text": "step1_preparation/text.md",
+          "verify": "step1_preparation/verify.sh"
+        },
+        {
+          "title": "Modifying the `main` Branch to Create a Conflict",
+          "text": "step2_provoke_merge_conflict/text.md",
+          "verify": "step2_provoke_merge_conflict/verify.sh"
+        }
+        
+      ],
+      "finish": {
+        "text": "finish.md"
+      }
+    }
+
+    
+  }
+  
