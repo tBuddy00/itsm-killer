@@ -1,0 +1,33 @@
+{
+    "title": "ITSM Git Merge & Git Rebase",
+    "description": "This scenarios will give a bit of insight in how to work with Git",
+    "details": {
+      "intro": {
+        "text": "intro.md"
+        
+      },
+      "steps": [
+        {
+          "title": "Git Merge",
+          "text": "step1_merge/text.md",
+          "verify": "step1_merge/verify.sh"
+        },
+        {
+          "title": "Git Rebase",
+          "text": "step2_rebase/text.md",
+          "verify": "step2_rebase/verify.sh"
+        },
+        {
+            "title": "Git Merge & Git Rebase: Differences and Similarities",
+            "text": "step3_differences_similarities/text.md"
+        }
+        
+      ],
+      "finish": {
+        "text": "finish.md"
+      }
+    }
+
+    
+  }
+  
