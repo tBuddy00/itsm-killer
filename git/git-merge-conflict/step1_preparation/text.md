@@ -1,4 +1,4 @@
-# Git Merge Conflict: What It Is and How to Resolve It 
+# Git Merge Conflict: What It Is and How to Resolve It (Preparation)
 
 To fully understand merge conflicts, we need to look at both branches that are involved in the merge. Merge conflicts happen because different changes have been made in each branch, and Git needs you to decide how to combine those changes.
 
