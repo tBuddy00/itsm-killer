@@ -1,6 +1,6 @@
 # Git Merge
 
-In this section, we will dive into the concepts of **Git Rebase** and **Git Merge** — two ways to integrate changes from one branch into another. While both commands serve the same purpose of bringing branches together, they do so in very different ways.
+In this part of the course, we will explore one of the most common and powerful features of Git: **merging** branches. **Git Merge** allows you to combine the work done on different branches into one unified project. This is particularly useful when you’ve been developing a feature or fixing a bug in an isolated branch and want to integrate those changes back into your `main` codebase.
 
 **What is Git Merge?**
 
