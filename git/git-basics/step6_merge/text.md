@@ -46,7 +46,7 @@ This indicates a successful merge without conflicts.
 
 ## Finally: Verify the Merge!
 
-After successfully merging the *my-first-branch* branch into `main`, it’s a good idea to verify that everything went smoothly. You can check the commit history to ensure the merge was successful and review how the branches were combined.
+After successfully merging the `my-first-branch` branch into `main`, it’s a good idea to verify that everything went smoothly. You can check the commit history to ensure the merge was successful and review how the branches were combined.
 
 * **Why?:** Verifying the merge helps ensure that all changes were applied as expected and that no accidental errors occurred during the process.
 
