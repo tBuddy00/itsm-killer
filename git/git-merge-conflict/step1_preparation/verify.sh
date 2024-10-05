@@ -15,5 +15,10 @@ if ! history | grep -q "git init"; then
     exit 1
 fi
 
+if ! history | grep -q "git switch -c my-first-branch2"; then
+    echo "Error: 'git switch -c my-first-branch2' has not been executed."
+    exit 1
+fi
+
 
 exit 0
