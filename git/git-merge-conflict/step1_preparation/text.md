@@ -92,4 +92,4 @@ Let’s stage and commit our changes on this branch.
 
 Now, we’ve saved the changes we made on this new branch. Git keeps track of everything, so later, when we try to combine the two branches, it will notice the differences.
 
-Please make sure to run `mkdir git-merge-conflict-demo`{{exec}}, `cd git-merge-conflict-demo`{{exec}}, `git init`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.
+Please make sure to run `mkdir git-merge-conflict-demo`{{exec}}, `cd git-merge-conflict-demo`{{exec}} and `git init`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.
