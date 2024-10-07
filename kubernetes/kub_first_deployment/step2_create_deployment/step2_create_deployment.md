@@ -34,7 +34,13 @@ This will give you a table like this:
 
 The command lists all our deployments.
 
-> Note: All our objects, including this deployment, are created within the **default namespace**. We’ll talk more about namespaces in a future lesson.
+> **NOTE!** All our objects, including this deployment, are created within the **default namespace**. We’ll discuss namespaces in more detail in a future lesson, covering topics such as:
+
+* 1. Deployment level
+
+* 2. Pod level
+
+* 3. Inside the pod (application level)
 
 From the table, we can see that our deployment is successfully running on one pod. To get more details, we can list all the pods by running:
 
