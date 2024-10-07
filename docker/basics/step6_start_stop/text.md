@@ -1,6 +1,6 @@
 # Starting and Stopping existing container
 
->  Please make sure to run all the given commands, this will help us confirm that everything is set up correctly.
+> Please make sure to run all the given commands, this will help us confirm that everything is set up correctly.
 
 In the last exercise, the challenge was to run a detached container from the `nginx:latest` image with the name *nginx_test*. Here's one possible solution of the last challenge:
 
