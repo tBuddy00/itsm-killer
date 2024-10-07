@@ -62,4 +62,4 @@ Finally, we can curl each of these IPs to check that nginx is running:
 You should see the default nginx page returned from each pod. Well done!
 
 
-Please make sure to run `kubectl get deployments`{{exec}}, `kubectl scale deployment/itsm-demo-deployment --replicas=3`{{exec}}, `kubectl get pods -o wide`{{exec}}, `export DIPS=$(kubectl get pods -o jsonpath='{.items[*].status.podIP}');echo $DIPS`{{exec}} and `curl $DIPS`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.
+Please make sure to run `kubectl get pods`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.
