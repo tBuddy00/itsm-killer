@@ -59,4 +59,4 @@ This output shows details like the `keys` and the secret `type`, but does not re
 
 Next, we’ll explore how to access the values stored in this secret.
 
-Please make sure to run `cd /itsm; ls -la`{{exec}}, `kubectl create secret generic app-file-creds --from-file=username=./user.txt --from-file=password=./pass.txt`{{exec}}, `kubectl get secrets`{{exec}} and `kubectl describe secret app-file-creds`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.
+Please make sure you created the secret: `kubectl create secret generic app-file-creds --from-file=username=./user.txt --from-file=password=./pass.txt`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.
