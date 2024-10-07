@@ -11,8 +11,11 @@ To create our new deployment, run the following command:
 Here’s a breakdown of what this does:
 
 * we’re using `kubectl` to interact with our cluster.
+
 * `create` indicates we want to create a new object.
+
 * `deployment` specifies the type of object we’re creating.
+
 * We then give our deployment a name (`itsm-demo-deployment`) and specify the Docker image we want to use (`nginx:alpine`), choosing this image for its small size.
 
 After running the command, you should see a message like:
@@ -29,7 +32,7 @@ This will give you a table like this:
 | --------------------- |:-----:| -----------:| ---------:| ---:|
 | itsm-demo-deployment  |  1/1  | 1           | 1         |  4s |
 
-This table shows all the deployments in our cluster.
+The command lists all our deployments.
 
 > Note: All our objects, including this deployment, are created within the **default namespace**. We’ll talk more about namespaces in a future lesson.
 
