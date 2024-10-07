@@ -23,8 +23,8 @@ To verify that our deployment was successful, we can use:
 
 and
 
-`kubectl get pods -o wide`{{exec}}.
+`kubectl get pods`{{exec}}.
 
 Now, let's access the default web page of nginx. However, since pods are quite **volatile**, it can lead to issues where the IP addresses may no longer be valid, resulting errors when trying to access the pod. That’s where a **Service** comes into play!
 
-Please make sure to run `kubectl create deployment itsm-srv-deploy --image=nginx:alpine --replicas=3 --port=80`{{exec}}, `kubectl get deployments`{{exec}} and `kubectl get pods -o wide`{{exec}}before clicking on Check. This will help us confirm that everything is set up correctly.
+Please make sure to run `kubectl get deployments`{{exec}} and `kubectl get pods`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.
