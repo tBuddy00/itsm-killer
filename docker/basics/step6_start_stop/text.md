@@ -1,6 +1,8 @@
 # Starting and Stopping existing container
 
-In the last exercise, the challenge was to run a detached container from the `nginx:latest` image with the name *nginx_test*. One possible way to do this would be with the following command:
+>  Please make sure to run all the given commands, this will help us confirm that everything is set up correctly.
+
+In the last exercise, the challenge was to run a detached container from the `nginx:latest` image with the name *nginx_test*. Here's one possible solution of the last challenge:
 
 `docker run -d --name nginx_test -p 8000:80 nginx:latest`{{exec}}
 
@@ -43,4 +45,4 @@ To restart the container, simply use `docker start nginx_test`{{exec}}.
 
 Then, check if it’s running again by using `docker ps`{{exec}}. You can also use `curl` to access the default nginx page once more!
 
-Please make sure to run `docker inspect nginx_test | grep "IPAddress"`{{exec}}, `curl 172.17.0.2`{{exec}} and `docker stop nginx_test`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.
+Please make sure to run `docker inspect nginx_test | grep "IPAddress"`{{exec}}, `curl 172.17.0.2`{{exec}} and `docker stop nginx_test`{{exec}} before clicking on Check.
