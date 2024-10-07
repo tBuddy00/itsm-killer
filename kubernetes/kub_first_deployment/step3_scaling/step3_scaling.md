@@ -35,7 +35,7 @@ Now let’s verify the scaling with another check:
 | --------------------- |:-----:| -----------:| ---------:| ------:|
 | itsm-demo-deployment  |  3/3  | 3           | 3         |  5m14s |
 	
-If you see **1/3** under the READY column, don’t worry—it just means the new pods are still starting up. Wait a few seconds and run the command again.
+If you see **1/3** under the READY column, don’t worry — it just means the new pods are still starting up. Wait a few seconds and run the command again.
 
 Success! Our deployment has scaled to three pods. You can now list the additional pods with:
 
