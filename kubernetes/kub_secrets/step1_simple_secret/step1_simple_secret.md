@@ -3,8 +3,7 @@
 
 Secrets provide an easy and secure way to manage sensitive data for your deployed applications. They allow for scoped *storage*, *access*, and *editing* of **sensitive information**.
 
->**NOTE:**
->By default, all of our resources, including secrets, are created within the **default namespace**. We will explore namespaces in more detail later on.
+>**NOTE:** By default, all of our resources, including secrets, are created within the **default namespace**. We will explore namespaces in more detail later on.
 
 To check for any existing `secrets`, we can use `kubectl`:
 
@@ -28,9 +27,7 @@ Here’s what the command does:
 
 * We add two key-value pairs: a *username* with the value of *admin* and a *password* with the value of *PWD$from?admin=*.
 
-
-> **TIP:**
-> You can use kubectl's auto-completion feature. Just type `"kubectl <space>"` and press 'tab' twice to see the possible options!
+> **TIP:** You can use kubectl's auto-completion feature. Just type `"kubectl <space>"` and press 'tab' twice to see the possible options!
 
 To confirm the secret was successfully created, run
 
@@ -44,5 +41,4 @@ We should be presented with the following table:
 
 This shows that the secret `app-user-creds` has been created, with `2` data entries (username and password).
 
-
-Please make sure to run `kubectl get secrets`{{exec}} and `kubectl create secret generic app-user-creds --from-literal=username=admin --from-literal=password='PWD$from?admin='`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.
+Please make sure you created the secret before continuing: `kubectl create secret generic app-user-creds --from-literal=username=admin --from-literal=password='PWD$from?admin='`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.
