@@ -25,7 +25,6 @@ and
 
 `kubectl get pods -o wide`{{exec}}.
 
-Now, to access the default web page of nginx, we’d typically need to get the IP address of the pods and call them directly. However, since pods can change **quickly**, this isn’t the most efficient method. That’s where a **Service** comes into play!
+Now, let's access the default web page of nginx. However, since pods are quite **volatile**, it can lead to issues where the IP addresses may no longer be valid, resulting errors when trying to access the pod. That’s where a **Service** comes into play!
 
 Please make sure to run `kubectl create deployment itsm-srv-deploy --image=nginx:alpine --replicas=3 --port=80`{{exec}}, `kubectl get deployments`{{exec}} and `kubectl get pods -o wide`{{exec}}before clicking on Check. This will help us confirm that everything is set up correctly.
-
