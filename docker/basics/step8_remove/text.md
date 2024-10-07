@@ -1,6 +1,6 @@
 # Removing docker container and images
 
-When working with Docker containers, it’s easy for the number of containers to grow quickly. By now, you might already see a few containers listed when you run `docker ps -a`{{exec}}.
+When working with Docker containers, it’s easy for the number of containers to grow quickly. By now, you might already see a few containers listed when you run `docker ps`{{exec}}.
 
 Luckily, Docker provides several commands to help keep things organized.
 
@@ -24,7 +24,6 @@ If you check the status again with `docker ps -a`{{exec}}, you’ll notice that 
 
 This is also a great example of why it’s helpful to name your containers explicitly. It makes it much easier to quickly identify and manage them.
 
-
 ## Removing specific container
 
 If you want to clean up specific containers that are no longer needed, you can remove them manually. Keep in mind that only **stopped** containers can be removed.
@@ -41,7 +40,7 @@ Then, **remove** the container with:
 
 `docker rm nginx_test`{{exec}}
 
-You can verify that it’s been removed by running `docker ps -a`{{exec}}.
+You can verify that it’s been removed by running `docker ps`{{exec}}.
 
 ## Perform a Global Cleanup
 
@@ -64,6 +63,6 @@ First, stop any remaining active containers by using `docker stop <containername
 
 If asked for *confirmation*, type `y` to proceed.
 
-Afterward, if you run `docker ps -a`{{exec}} and `docker images`{{exec}}, both tables should be **empty** again, showing that everything unnecessary has been cleaned up.
+Afterward, if you run `docker ps`{{exec}} and `docker images`{{exec}}, both tables should be **empty** again, showing that everything unnecessary has been cleaned up.
 
-Please make sure to run `docker ps -a`{{exec}}, `docker run -d --rm --name nginx_fluct nginx:latest`{{exec}}, `docker stop nginx_fluct`{{exec}}, and `docker system prune -a`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.
+Please make sure to run `docker ps`{{exec}}, `docker run -d --rm --name nginx_fluct nginx:latest`{{exec}}, `docker stop nginx_fluct`{{exec}}, and `docker system prune -a`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.
