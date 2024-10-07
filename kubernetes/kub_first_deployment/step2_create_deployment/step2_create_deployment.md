@@ -57,6 +57,7 @@ This shows the pod name, its status, and how many times it has restarted.
 For more detailed information about any specific pod, you can run:
 
 * `kubectl describe pods`{{exec}} (for all pods), or
+
 * `kubectl describe pod <podname>`{{exec}} (for a specific pod).
 
 This will give you details like:
