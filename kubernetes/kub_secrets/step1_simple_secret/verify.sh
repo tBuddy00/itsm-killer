@@ -4,7 +4,7 @@ if ! history | grep -q "kubectl get secrets"; then
     exit 1
 fi
 
-# Wie findest du das? überprüft hier auch wieder auf den Output, anstatt auf den Input
+# Wie findest du das? überprüft hier auch wieder ob 'app-user-creds' überhaupt existiert
 if ! kubectl get secrets | grep -q "app-user-creds"; then
     echo "Error: Secret 'app-user-creds' does not exist."
     exit 1
