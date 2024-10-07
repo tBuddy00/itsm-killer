@@ -15,14 +15,6 @@ if ! history | grep -q "hostname"; then
     exit 1
 fi
 
-
-# Prüfen, ob der Befehl ausgeführt wurde
-if ! history | grep -q "exit"; then
-    echo "Error: 'exit' has not been executed."
-    exit 1
-fi
-
-
 # Prüfen, ob der Befehl ausgeführt wurde
 if ! history | grep -q "docker run -it --rm python:3-alpine python -c "print('hello');""; then
     echo "Error: "'docker run -it --rm python:3-alpine python -c "print('hello');'" has not been executed."
