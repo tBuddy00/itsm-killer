@@ -31,5 +31,3 @@ Instead of using `docker run -it`, try using `docker run -d` to start a containe
 
 **Your task:**
 Run a container from the `nginx:latest` image with its **default** command, in **detached mode**, and name it *nginx_test*. Once the container is running, use `docker ps` to check its status!
-
-Please make sure to run `docker run -it --name itsm_hello alpine:latest echo "hello"`{{exec}}, `docker ps -a`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.
