@@ -53,8 +53,11 @@ To perform a global cleanup, we can use:
 This command will remove:
 
 * Stopped containers
+
 * Docker images that aren’t associated with any containers
+
 * Unused networks
+
 * Unassociated volumes
 
 First, stop any remaining active containers by using `docker stop <containername>`{{exec}}. Then, run the global cleanup with:
@@ -65,4 +68,4 @@ If asked for *confirmation*, type `y` to proceed.
 
 Afterward, if you run `docker ps`{{exec}} and `docker images`{{exec}}, both tables should be **empty** again, showing that everything unnecessary has been cleaned up.
 
-Please make sure to run `docker ps`{{exec}}, `docker run -d --rm --name nginx_fluct nginx:latest`{{exec}}, `docker stop nginx_fluct`{{exec}}, and `docker system prune -a`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.
+Before clicking on check, please make sure to run `docker ps`{{exec}} and `docker stop nginx_fluct`{{exec}}.
