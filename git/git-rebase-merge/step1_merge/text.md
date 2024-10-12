@@ -46,7 +46,7 @@ Next, create a new branch to work on a feature. This will isolate your changes f
 
 Let's create an new branch and switch to it:
 
-* `git swich -c feature-branch`{{exec}}
+* `git switch -c feature-branch`{{exec}}
 
 Create a file called `feature.txt`:
 
@@ -97,6 +97,4 @@ You’ll see a **merge** commit that combines both histories, keeping all the or
 
 Finally: Let's check our log to see the merge commit!
 
-* `git log --oneline --graph`{{exec}} 
-
-Please make sure to run `mkdir git-merge-example`{{exec}}, `cd git-merge-example`{{exec}} and `git init`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.
+* `git log --oneline --graph`{{exec}}
