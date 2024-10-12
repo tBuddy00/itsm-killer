@@ -16,7 +16,8 @@ To create a new branch in Git, you use the `git branch` command followed by the 
 
 What happens here?
 
-* You’ve created a new branch named my-first-branch.
+* You’ve created a new branch named *my-first-branch*.
+
 * This branch is an **exact** copy of the `main` branch at the time of creation, but you're not on it yet. You are still on the `main` branch after this step.
 
 To view all the branches in your repository, you can use:
@@ -58,5 +59,3 @@ You should see on your terminal something like this:
 ```
 
 The **active branch** will have an asterisk (*) next to it.
-
-Please make sure to run `git branch my-first-branch`{{exec}}, `git branch`{{exec}} and `git switch my-first-branch`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.
