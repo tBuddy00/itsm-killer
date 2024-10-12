@@ -31,5 +31,3 @@ Rebase onto `main`:
 * `git rebase main`{{exec}}
 
 Git will take the commits from `feature-branch` and reapply them on top of the **latest commits in `main`. If no conflicts occur, the rebase will complete smoothly.
-
-Please make sure to run `git switch feature-branch`{{exec}} and `git rebase main`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.
