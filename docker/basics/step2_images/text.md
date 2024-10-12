@@ -2,7 +2,7 @@
 
 So far, we know that we work with images and containers. Containers are essentially instances created from images.
 
-Running `docker images`{{exec}} (or `docker images ls`) will provide you with a list of all images available locally on your system.
+Running `docker images`{{exec}} will provide you with a list of all images available locally on your system.
 
 Initially, you might see an empty table. Once you have images, they will be listed with the following details:
 
