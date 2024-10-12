@@ -29,4 +29,4 @@ This command is almost the same, but with one key difference: the `-d` flag runs
 
 Feel free to experiment with these commands and explore how Docker handles different scenarios! If you have any questions, don’t hesitate to ask!
 
-Please make sure to run `docker run -it alpine:latest sh`{{exec}}, `hostname`{{exec}}, `exit`{{exec}}, `docker run -it --rm python:3-alpine python -c "print('hello');"`{{exec}} and `docker run -d --rm python:3-alpine python -c "print('hello');"`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.
+Before clicking on Check, please make sure to run `docker run -it alpine:latest sh`{{exec}}.
