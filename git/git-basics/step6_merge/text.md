@@ -1,4 +1,4 @@
-# Merging the Branch into Main
+# Merging the Branch into `main`
 
 Once you've completed the work on your feature branch, you’ll want to bring those changes back into the `main` branch so that they become part of the primary codebase. **Merging** allows you to combine the changes from your feature branch into another branch, typically `main`. This process ensures that your newly developed feature becomes part of the project while keeping the `main` branch organized and up-to-date.
 
@@ -56,4 +56,4 @@ To view the merge history use:
 
 This command provides a visual representation of your commit history, showing how the branches were merged.
 
-Please make sure to run `git switch main`{{exec}}, `git pull origin main`{{exec}}, `git merge my-first-branch`{{exec}} and `git log --oneline --graph --decorate`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.
+Before clicking on Check, please make sure to use `git switch main`{{exec}} and `git merge my-first-branch`{{exec}}.
