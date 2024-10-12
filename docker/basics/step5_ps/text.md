@@ -30,4 +30,5 @@ So, just remember:
 Instead of using `docker run -it`, try using `docker run -d` to start a container in detached mode, meaning it will run in the background.
 
 **Your task:**
+
 Run a container from the `nginx:latest` image with its **default** command, in **detached mode**, and name it *nginx_test*. Once the container is running, use `docker ps` to check its status!
