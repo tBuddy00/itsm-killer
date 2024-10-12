@@ -23,5 +23,3 @@ You now have an **empty** Git repository, initialized in this folder. You can ch
 `git status`{{exec}}
 
 Running `git status` gives you an overview of what’s happening in your repository: what files are being tracked, if there are any changes, and whether those changes are staged for a commit.
-
-Please make sure to run `mkdir my-first-git-project`{{exec}}, `cd my-first-git-project`{{exec}}, `git init`{{exec}} and `git status`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.
