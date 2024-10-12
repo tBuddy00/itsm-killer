@@ -36,4 +36,5 @@ And now: Run this commands, to set your personal informations:
 
 The `git config --list`{{exec}} command allows you to review the configuration to ensure that everything is set correctly.
 
-Please make sure to run `git --version`{{exec}}, `git config --global user.name "userOne"`{{exec}}, `git config --global user.email "userone.email@example.com"`{{exec}} and `git config --list`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.
+Before clicking on Check, please make sure to run `git --version`{{exec}}.
+
