@@ -1,6 +1,5 @@
 # Inspecting container with docker logs and exec
 
-
 ## docker logs
 
 In the previous step, we learned how to run Docker containers in *detached* mode. To check the output of a detached container, we can use the `docker logs <containername>` command.
@@ -15,7 +14,7 @@ Once your container is up and running, you can check its logs by entering:
 
 Here, you’ll see the typical output that nginx generates when the server starts up.
 
-# docker exec
+## docker exec
 
 Sometimes, we need to look inside the container to inspect certain files or run commands. A useful command for this is:
 
@@ -31,5 +30,5 @@ Once you run the command, the terminal prompt will change to `#`, indicating tha
 
 When you're done, simply type `exit`{{exec}} to close the `sh`ell and return to your host system.
 
-Please make sure to run `docker start nginx_test`{{exec}}, `docker logs nginx_test`{{exec}} and `docker exec -ti nginx_test sh`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.
+Before clicking on Check, please make sure to run `docker logs nginx_test`{{exec}}
 
