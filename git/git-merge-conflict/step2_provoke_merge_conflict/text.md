@@ -116,6 +116,3 @@ Run the commit command to finalize the merge:
 `git commit`{{exec}}
 
 This step saves the merge into your project history, now with the conflict resolved.
-
-Please make sure to run `git switch main`{{exec}}, `echo "Hello from the main branch again" > file.txt`{{exec}}, `git add file.txt`{{exec}} and `git commit -m "Modify file.txt on main"`{{exec}}
-before clicking on Check. This will help us confirm that everything is set up correctly.
