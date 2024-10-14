@@ -38,4 +38,4 @@ Now, let's verify that it has been successfully deleted:
 
 Both `kubectl get deployments` and `kubectl get pods` should return **empty** tables. If you still see some pods, give it a moment and try again—those pods should disappear shortly.
 
-Please make sure to run `kubectl get deployments`{{exec}}, `kubectl get pods`{{exec}} and `kubectl delete deployment itsm-demo-deployment`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.
+Before clicking on Check, please make sure to run `kubectl get pods`{{exec}}.
