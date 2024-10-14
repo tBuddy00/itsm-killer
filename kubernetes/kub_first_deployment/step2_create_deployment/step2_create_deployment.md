@@ -63,7 +63,9 @@ For more detailed information about any specific pod, you can run:
 This will give you details like:
 
 1. **Labels:** Labels assigned to the pod.
+
 2. **IPs:** The pod’s IP addresses.
+
 3. **Events:** Events related to the pod’s lifecycle, helpful for troubleshooting deployment issues.
 
 With the deployment running, let’s try accessing the nginx web server. First, we’ll retrieve the pod’s IP address:
@@ -75,5 +77,3 @@ Now, use curl to access the nginx pod on port 80:
 `curl $DPIP`{{exec}}
 
 You should see the default nginx page as a result! In later steps, we’ll explore easier ways to retrieve this information from Kubernetes.
-
-Please make sure to run `kubectl create deployment itsm-demo-deployment --image=nginx:alpine`{{exec}}, `kubectl get deployments`{{exec}}, `kubectl get pods`{{exec}}, `kubectl describe pods`{{exec}}, `export DPIP=$(kubectl describe pods | grep "IP:" | tail -n 1 | cut -d " " -f14);echo $DPIP`{{exec}} and `curl $DPIP`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.
