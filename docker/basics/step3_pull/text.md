@@ -23,4 +23,4 @@ To check if the image was downloaded successfully, run `docker images`{{exec}}. 
 
 Feel free to reach out if you have any questions or need further assistance!
 
-Please make sure to run `docker pull nginx`{{exec}} and `docker images`{{exec}}before clicking on Check. This will help us confirm that everything is set up correctly.
+Please make sure to run `docker pull nginx`{{exec}} and `docker images`{{exec}} before clicking on Check.
