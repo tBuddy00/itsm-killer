@@ -58,5 +58,3 @@ username:  9 bytes
 This output shows details like the `keys` and the secret `type`, but does not reveal the sensitive values.
 
 Next, we’ll explore how to access the values stored in this secret.
-
-Please make sure you created the secret: `kubectl create secret generic app-file-creds --from-file=username=./user.txt --from-file=password=./pass.txt`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.
