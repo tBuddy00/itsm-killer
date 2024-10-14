@@ -14,4 +14,4 @@ Next, let’s check how many nodes are part of our cluster. To do this, we can u
 
 From this, we can see that we have one *node* available and ready to use.
 
-Please make sure to run `kubectl cluster-info`{{exec}} and `kubectl get nodes`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.
+Before clicking on Check, please make sure to use `kubectl get nodes`{{exec}} before clicking on Check.
