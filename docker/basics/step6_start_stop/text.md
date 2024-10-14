@@ -35,6 +35,7 @@ Alternatively, since we set up port forwarding, we can also access the default n
 If we want to stop or start the nginx container, we can use:
 
 * `docker stop <container name>` to stop the container.
+
 * `docker start <container name>` to start the container again.
 
 For example, to stop our nginx container, run:
