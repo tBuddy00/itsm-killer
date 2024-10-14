@@ -5,15 +5,15 @@
 #fi
 
 
-if ! history | grep -q "kubectl get deployments"; then
-    echo "Error: 'kubectl get deployments' has not been executed."
+if ! kubectl get deployments | grep -q "itsm-srv-deploy"; then
+    echo "Error: The deployment 'itsm-srv-deploy' was not found."
     exit 1
 fi
 
-if ! history | grep -q "kubectl get pods"; then
-    echo "Error: 'kubectl get deployments' has not been executed."
-    exit 1
-fi
+#if ! history | grep -q "kubectl get pods"; then
+#    echo "Error: 'kubectl get deployments' has not been executed."
+#    exit 1
+#fi
 
 
 #if ! history | grep -q "kubectl get pods -o wide"; then

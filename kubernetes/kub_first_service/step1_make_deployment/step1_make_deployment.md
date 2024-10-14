@@ -26,5 +26,3 @@ and
 `kubectl get pods`{{exec}}.
 
 Now, let's access the default web page of nginx. However, since pods are quite **volatile**, it can lead to issues where the IP addresses may no longer be valid, resulting errors when trying to access the pod. That’s where a **Service** comes into play!
-
-Please make sure to run `kubectl get deployments`{{exec}} and `kubectl get pods`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.
