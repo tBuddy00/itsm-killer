@@ -1,6 +1,6 @@
 # Kubernetes Deployment YAML
 
-Let's take a look at the deployment file. 
+Now, let’s delve deeper into the service file to gain a better understanding of its configuration.
 
 `cat /itsm/itsm_deployment.yaml`{{exec}}
 
@@ -30,13 +30,14 @@ spec:
       app: itsm-server
 ```
 
-We see quite some similarities, compared to the `itsm_service.yml`.
-We again declare the `apiVersion` of this *yaml* configuration. You'll see a slight difference with us using `apps/v1` here. The exact differences are out of scope for this scenario, but you can get more information in the [API docs](https://kubernetes.io/docs/reference/using-api/) of Kubernetes.
+We can observe several similarities with the `itsm_service.yml` file. Once again, we declare the `apiVersion` for this *YAML* configuration. In this instance, we’re using `apps/v1`, which slightly differs from our previous example. While the specific distinctions are beyond the scope of this scenario, you can find more information in the [Kubernetes API documentation](https://kubernetes.io/docs/reference/using-api/) of Kubernetes.
 
-For the rest, it follows pretty much the example configuration from the [Deployment docs](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) from Kubernetes. It's worth a read, especially when it comes to additional configurations `keywords` that are not covered here (e.g. Access to private registry).
+The rest of the file closely follows the example configuration provided in the [Deployment documentation](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) on the Kubernetes website. It's definitely worth a read, especially for insights into additional configuration `keywords` that we won't cover here, such as accessing a private registry.
 
-Let's continue going through the file. You'll see that we have declared another `kind` of Kubernetes *object*. This time it's a configuration for a **Deployment**. Again, under the `metadata` section, we set a `name` for our deployment and a `label`, so we can address this deployment later on.
+Now, let’s continue exploring the file. Here, we declare another `kind` of Kubernetes object: a configuration for a **Deployment**. In the `metadata` section, we assign a `name` to our deployment and set a `label`, which allows us to reference this deployment later on.
 
-In the `spec` section, we perform our actual deployment configuration. You'll find all the details that we had previously defined on the command line. With `replicas` we set our pod count to **3**. Furthermore - under the `template.spec` section, we define the container image(s) to be used for our deployment as well as the `ports` that this image is exposing.
+Moving to the `spec` section, we define the actual deployment configuration. This section includes all the details that we previously specified on the command line. For instance, we set the number of replicas to `3`, meaning that three pods will be running. Additionally, under the `template.spec` section, we specify the container image(s) to be used for our deployment and the `ports` that the image exposes.
 
-Finally, you'll find the `selector` that defines, which label(s) this configuration addresses. 
+Lastly, we have the `selector`, which defines the label(s) that this configuration targets.
+
+Please use `cat /itsm/itsm_deployment.yaml`{{exec}} before clicking on Check.
