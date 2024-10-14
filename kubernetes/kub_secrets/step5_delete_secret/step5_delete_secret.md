@@ -29,7 +29,5 @@ Great!
 
 And just like that, the secret is gone! 🎉
 
-Please make sure to run `kubectl get secrets`{{exec}} and `kubectl delete secret app-user-creds`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.
-
 
 
