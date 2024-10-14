@@ -5,6 +5,7 @@ We won’t be covering Docker installation details here. For a comprehensive gui
 For our first step, we’ll check if Docker is available:
 
 * docker &rarr; This will list the available commands.
+
 * docker version &rarr; This will show the current version of Docker.
 
 Running `docker`{{exec}} will give us an overview of the commands you can use, indicating that Docker is installed.
