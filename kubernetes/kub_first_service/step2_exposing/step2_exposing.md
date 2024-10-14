@@ -42,5 +42,3 @@ Then, call your service:
 `curl $SRVIP:8080`{{exec}}
 
 You should now see the familiar nginx welcome page!
-
-Please make sure to run `kubectl expose deployment/itsm-srv-deploy --port=8080 --target-port=80 --name="webshop-srv"`{{exec}}, `export SRVIP=$(kubectl get service/webshop-srv -o jsonpath='{.spec.clusterIP}');echo $SRVIP`{{exec}} and `curl $SRVIP:8080`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.

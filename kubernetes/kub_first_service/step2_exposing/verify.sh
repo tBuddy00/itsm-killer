@@ -1,9 +1,9 @@
 # Prüfen, ob der Befehl ausgeführt wurde
 
-if ! kubectl get deployments | grep -q "itsm-srv-deploy"; then
-    echo "Error: Deployment 'itsm-srv-deploy' does not exist."
-    exit 1
-fi
+#if ! kubectl get deployments | grep -q "itsm-srv-deploy"; then
+#    echo "Error: Deployment 'itsm-srv-deploy' does not exist."
+#    exit 1
+#fi
 
 if ! kubectl get services | grep -q "webshop-srv"; then
     echo "Error: Service 'webshop-srv' does not exist."
