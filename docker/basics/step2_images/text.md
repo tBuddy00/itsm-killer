@@ -14,6 +14,6 @@ Initially, you might see an empty table. Once you have images, they will be list
 
 Just a heads-up: image sizes can vary widely. They can range from around 25MB to over 10GB, depending on the contents of the image.
 
-Please make sure to run `docker images`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.
+Please make sure to run `docker images`{{exec}} before clicking on Check.
 
 Feel free to explore and let us know if you have any questions!
