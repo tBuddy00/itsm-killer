@@ -1,20 +1,23 @@
 # `kubectl` with `yaml`/`yml` files 
 
-In the previous scenarios, we used `kubectl` for rolling our application. For the configuration, we used terminal parameters. This is a fast but not very maintainable way. 
+In the previous scenarios, we utilized `kubectl` to roll out our application using terminal parameters. While this method is quick, it’s not very maintainable in the long run.
 
-A better way would be, if we describe our deployment in files and use them on the cluster. This way, we can also perform a versioning on them and get log information, why certain configurations were changed.
+A more effective approach is to describe our deployment in configuration files that can be applied to the cluster. This not only allows for better organization but also enables version control, helping us keep track of changes and understand why specific configurations were modified.
 
-Our application will consist of a *deployment* and a *service*.
+For our application, we will be working with both a *deployment* and a *service*.
 
-In order to get an idea how to write the files accordingly, we can check out the [Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) and [Service](https://kubernetes.io/docs/concepts/services-networking/service/) template from the Kubernetes docs.
+To get a clear idea of how to structure these files, we can refer to the [Deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) and [Service](https://kubernetes.io/docs/concepts/services-networking/service/) templates available in the Kubernetes documentation.
 
-In this example, the deployment and service file are provided under our application deployment folder `/itsm`.
+In this example, you will find the deployment and service files located in our application deployment folder at `/itsm`.
 
-Let's check them out.
+Let’s explore these files together by running the following command:
+
 `cd /itsm; ls -la`{{exec}}
 
-Within the folder, we find a `itsm_service.yml` and `itsm_deployment.yaml` file.
+Within this folder, you will see two files: `itsm_service.yml` and `itsm_deployment.yaml`.
 
->NOTICE! One of the files ends with `.yml` and the other one with `.yaml`. The reason is, that both are accepted file endings for *yaml* files. You'll find both versions out in the wild. This way, we cover both cases.
+> **NOTE!** One of the files uses the `.yml` extension, while the other uses `.yaml`. Both extensions are acceptable for YAML files, and you’ll encounter both formats in the wild. By covering both cases, we ensure flexibility.
 
->NOTICE!  `Yaml` files are notoriously famous for their ***indent structure*** and the errors that come with that. When creating a `yaml` file yourself, it is highly recommended that you use some kind of tool assistance (Linter / Syntax checker).
+> **NOTE!** YAML files are well-known for their indentation structure and the errors that can arise from it. When creating a YAML file yourself, it’s highly recommended to use some kind of tool assistance, such as a linter or syntax checker, to avoid common pitfalls.
+
+Before clicking on Check, please use `cd /itsm; ls -la`{{exec}}. 
