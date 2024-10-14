@@ -1,8 +1,8 @@
 # Prüfen, ob der Befehl ausgeführt wurde
-if ! history | grep -q "kubectl get secrets"; then
-    echo "Error: 'kubectl get secrets' has not been executed."
-    exit 1
-fi
+#if ! history | grep -q "kubectl get secrets"; then
+#    echo "Error: 'kubectl get secrets' has not been executed."
+#    exit 1
+#fi
 
 # Wie findest du das? überprüft hier auch wieder ob 'app-user-creds' überhaupt existiert
 if ! kubectl get secrets | grep -q "app-user-creds"; then

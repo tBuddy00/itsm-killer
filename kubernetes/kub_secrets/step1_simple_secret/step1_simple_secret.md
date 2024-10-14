@@ -40,5 +40,3 @@ We should be presented with the following table:
 | app-user-creds  |  Opaque     |  2    | 3s   |
 
 This shows that the secret `app-user-creds` has been created, with `2` data entries (username and password).
-
-Please make sure you created the secret before continuing: `kubectl create secret generic app-user-creds --from-literal=username=admin --from-literal=password='PWD$from?admin='`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.
