@@ -42,4 +42,4 @@ And for the password, simply run:
 
 This will reveal the original values we set up for our credentials.
 
-Please make sure to run `kubectl get secret app-file-creds -o jsonpath='{.data}'`{{exec}}, `kubectl get secret app-file-creds -o jsonpath='{.data.username}' | base64 --decode`{{exec}} and `kubectl get secret app-file-creds -o jsonpath='{.data.password}' | base64 --decode`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.
+Please ensure you have created credentials with both a `username` and a `password` before clicking on Check.

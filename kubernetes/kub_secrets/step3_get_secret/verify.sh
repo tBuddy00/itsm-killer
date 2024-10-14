@@ -1,18 +1,7 @@
 # Prüfen, ob der Befehl ausgeführt wurde
-if ! history | grep -q "kubectl get secret app-file-creds -o jsonpath='{.data}'"; then
-    echo "Error: 'kubectl get secret app-file-creds -o jsonpath='{.data}'' has not been executed."
-    exit 1
-fi
 
-
-if ! history | grep -q "kubectl get secret app-file-creds -o jsonpath='{.data.username}' | base64 --decode"; then
-    echo "Error: 'kubectl get secret app-file-creds -o jsonpath='{.data.username}' | base64 --decode' has not been executed."
-    exit 1
-fi
-
-
-if ! history | grep -q "kubectl get secret app-file-creds -o jsonpath='{.data.password}' | base64 --decode"; then
-    echo "Error: 'kubectl get secret app-file-creds -o jsonpath='{.data.password}' | base64 --decode' has not been executed."
+if ! kubectl get secret app-file-creds -o jsonpath='{.data.username}' | base64 --decode | grep -q "."; then
+    echo "Error: The secret 'app-file-creds' does not contain a valid 'username' entry."
     exit 1
 fi
 
