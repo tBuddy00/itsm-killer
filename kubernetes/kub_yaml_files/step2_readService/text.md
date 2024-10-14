@@ -1,6 +1,6 @@
 # Kubernetes Service YAML
 
-Let's take a look at the service file. 
+Now, let’s take a closer look at the service file to understand its configuration better.
 
 `cat /itsm/itsm_service.yml`{{exec}}
 
@@ -21,17 +21,18 @@ spec:
       protocol: TCP
 ```
 
-Take note of the `apiVersion` field. This declares the api version of this file and with that, which `keywords` are available. 
+Let’s take a moment to examine the `apiVersion` field. This field specifies the API version of this configuration file, which determines the available `keywords` you can use.
 
-The second entry is `kind`. Recall from the first scenario, that Kubernetes uses the [object](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/) term. With the `kind` entry you can select which kind of object this configuration belongs to.
+The second entry you’ll notice is `kind`. As you may remember from our earlier scenarios, Kubernetes employs the term [object](https://kubernetes.io/docs/concepts/overview/working-with-objects/kubernetes-objects/) to describe its various components. The `kind` field allows you to define which type of object this configuration pertains to.
 
-Under the `metadata` section, we can set the `name` of the service. In our case we call it ***demo-proxy***.
+Moving on to the `metadata` section, here you can specify the name of your service. In this case, we’ve named it *demo-proxy*.
 
-Continuing, you'll find the `labels` section. Labels make it easier for you to ***retrieve*** or ***configure*** Kubernetes *objects*, that belong together in a certain way.
+Next, you’ll find the `labels` section. Labels play a crucial role in simplifying the process of **retrieving** or **configuring** Kubernetes objects that share certain characteristics.
 
-The matching counterpart are `selectors`, where you can perform actions to all objects, which match the *selected* label(s).
+The corresponding counterpart to labels are the `selectors`, which enable you to perform actions on all objects that match the *selected* label(s).
 
-Lastly, we come to the `spec` section. For this service, we defined a port mapping. Remember the keywords `Containerport`, `targetPort`, and `Port`. Here, we access our service on the `port` **8083** and the incoming traffic gets routed to our pods on the `targetPort` **80**. That's the port where our `nginx` docker application listens on. We also give the port mapping a meaningful `name` about what this is about and select the `protocol` to be applied.
+Finally, we arrive at the `spec` section. For this service, we define a port mapping. Remember the keywords `containerPort`, `targetPort`, and `port`? Here, our service listens on `port` **8083**, while incoming traffic is routed to our pods via `targetPort` **80**, the port where our `nginx` Docker application is actively listening. We also assign a meaningful `name` to this port mapping to clarify its purpose and specify the `protocol` to be used.
 
+This is a foundational configuration for a service. If you’d like to delve deeper into the intricacies of **Services** in Kubernetes, I encourage you to explore the [Service documentation](https://kubernetes.io/docs/concepts/services-networking/service/), where you can discover additional **keywords** and options for configuration.
 
-This is a very basic configuration of a service. You can check out the [Service](https://kubernetes.io/docs/concepts/services-networking/service/) docs, to find more about **Services** in Kubernetes and additional `keywords` that can be used for configuration.
+Please use `cat /itsm/itsm_service.yml`{{exec}} before clicking on Check.
