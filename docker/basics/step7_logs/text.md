@@ -30,5 +30,5 @@ Once you run the command, the terminal prompt will change to `#`, indicating tha
 
 When you're done, simply type `exit`{{exec}} to close the `sh`ell and return to your host system.
 
-Before clicking on Check, please make sure to run `docker logs nginx_test`{{exec}}
+Before clicking on Check, please make sure to run `docker logs nginx_test`{{exec}}.
 
