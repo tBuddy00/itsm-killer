@@ -17,7 +17,9 @@ At the moment, we only have one pod running. To scale this up, simply run the fo
 This tells Kubernetes to scale our deployment. The key parts of the command are:
 
 * `kubectl scale`: This is the command used for scaling.
+
 * `deployment/itsm-demo-deployment`: We specify which deployment to scale.
+
 * `--replicas=3`: This sets the number of pods we want to run.
 
 Once executed, you should see the response:
@@ -61,5 +63,4 @@ Finally, we can curl each of these IPs to check that nginx is running:
 
 You should see the default nginx page returned from each pod. Well done!
 
-
-Please make sure to run `kubectl get pods`{{exec}} before clicking on Check. This will help us confirm that everything is set up correctly.
+Please make sure to run `kubectl get deployments`{{exec}} before clicking on Check.
