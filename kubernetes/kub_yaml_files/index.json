@@ -23,7 +23,7 @@
       },
       {
         "title": "Applying YAML",
-        "text": "step4_ApplyFiles/text.md",
+        "text": "step4_applyFiles/text.md",
         "verify":"step4_applyFiles/verify.sh"
       },
       {
