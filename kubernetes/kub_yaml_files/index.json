@@ -8,27 +8,27 @@
     "steps": [
       {
         "title": "YAML Files in Kubernetes",
-        "text": "step1_findFiles.md",
+        "text": "step1_findFiles/text.md",
         "verify":"step1_findFiles/verify.sh"
       },
       {
         "title": "Reading a Service YAML",
-        "text": "step2_readService.md",
+        "text": "step2_readService/text.md",
         "verify":"step2_readService/verify.sh"
       },
       {
         "title": "Reading a Deployment YAML",
-        "text": "step3_readDeployment.md",
+        "text": "step3_readDeployment/text.md",
         "verify":"step3_readDeployment/verify.sh"
       },
       {
         "title": "Applying YAML",
-        "text": "step4_ApplyFiles.md",
+        "text": "step4_ApplyFiles/text.md",
         "verify":"step4_applyFiles/verify.sh"
       },
       {
         "title": "Changing Configuration",
-        "text": "step5_adjusting_yaml.md",
+        "text": "step5_adjusting_yaml/text.md",
         "verify":"step5_adjusting_yaml/verify.sh"
       }
     ],
