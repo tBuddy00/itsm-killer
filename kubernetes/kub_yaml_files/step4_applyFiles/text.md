@@ -1,4 +1,4 @@
-# Applying the files the cluster
+# Applying the files to the cluster
 
 ## Before Rollout
 
@@ -16,10 +16,15 @@ drwxr-xr-x 20 root root 4096 Jan 10 09:23 ..
 -rw-r--r--  1 root root  214 Jan 10 09:23 itsm_service.yml
 ```
 
-Next, let's check if there are any existing *deployments*:
+Next, let's check if there are any existing *deployments* or *services*:
+
 `kubectl get deployments`{{exec}}
 
-We should get: *No resources found in default namespace.*
+We should get: 
+
+```
+No resources found in default namespace.
+```
 
 The same goes for *services*.
 
@@ -30,20 +35,27 @@ The same goes for *services*.
 | kubernetes  |  ClusterIP  |  10.xx.0.1  | \<none\>    |  443/TCP | 18d |
 
 
-## Rollout
-Now, let's start rolling out our Application. In order to use our files, we're using `kubectl apply -f <filename>`. As best practice it is said, that you should always ***start with the service***.
+## Rolling out the application
 
-**Executing** `kubectl apply -f itsm_service.yml`{{exec}} results in: *service/demo-proxy created*
+Let’s begin the rollout of our application! To apply our configuration files, we’ll use the command `kubectl apply -f <filename>`. It's considered best practice to **start with the service**, as this sets up the network configuration before deploying the application itself.
 
-Let's continue with our deployment file.
+**Executing** `kubectl apply -f itsm_service.yml`{{exec}} will result in: 
 
-**Executing** `kubectl apply -f itsm_deployment.yaml`{{exec}} results in: *deployment.apps/demo-deployment created*
+```
+service/demo-proxy created
+```
 
-## After Rollout
+Let's move on to deploying our application using the deployment file.
 
-After we performed our rollout, we should check if everything worked as expected. 
+By **executing** the command `kubectl apply -f itsm_deployment.yaml`{{exec}}, you should see the message: 
 
-Let's again start checking for our *deployments* and *services*:
+```
+deployment.apps/demo-deployment created.
+```
+
+## Verifying the Rollout
+
+With the rollout complete, it's important to verify that everything is functioning as expected. We'll start by checking our *deployments* and *services*:
 
 `kubectl get deployments`{{exec}}
 
@@ -51,7 +63,7 @@ Let's again start checking for our *deployments* and *services*:
 | --------------------- |:-----:| -----------:| ---------:| ---:|
 | demo-deployment       |  3/3  | 3           | 3         |  4s |
 
-
+Now, let's look at the services:
 
 `kubectl get services`{{exec}}
 
@@ -60,13 +72,15 @@ Let's again start checking for our *deployments* and *services*:
 | kubernetes  |  ClusterIP  |  10.xx.0.1         | \<none\>    |  443/TCP  | 18d |
 | demo-proxy  |  ClusterIP  |  *10.xxx.xxx.xxx*  | \<none\>    |  8083/TCP | 8s  |
 
+As we can see, the deployment is running with 3 pods ready, and our service is active with a Cluster-IP, listening on `port` **8083**.
 
-We can see our deployment with 3 pods available and being ready. Furthermore, we find our service with a Cluster-IP and the service `port` of **8083**.
+To confirm everything is working, let's try accessing our Nginx web server:
 
-Let's try to access our nginx webserver. 
+1. `export SRVIP=$(kubectl get service/demo-proxy -o jsonpath='{.spec.clusterIP}');echo $SRVIP`{{exec}}
 
-`export SRVIP=$(kubectl get service/demo-proxy -o jsonpath='{.spec.clusterIP}');echo $SRVIP`{{exec}}
+2. `curl $SRVIP:8083`{{exec}}
 
-`curl $SRVIP:8083`{{exec}}
+You should now see the familiar Nginx welcome page! This confirms that the rollout using YAML files was a success.
 
-There we see the infamous nginx welcome page! Our rollout with *yaml* files succeeded.
+Before clicking on check, please make sure to use `kubectl apply -f itsm_deployment.yaml`{{exec}}.
+
