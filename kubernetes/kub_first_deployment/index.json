@@ -8,22 +8,22 @@
     "steps": [
       {
         "title": "Kubernetes Cluster",
-        "text": "step1_check_cluster.md/text.md",
+        "text": "step1_check_cluster.md",
         "verify":"step1_check_cluster/verify.sh"
       },
       {
         "title": "Create a Deployment",
-        "text": "step2_create_deployment.md/text.md",
+        "text": "step2_create_deployment.md",
         "verify":"step2_create_deployment/verify.sh"
       },
       {
         "title": "Scale a Deployment",
-        "text": "step3_scaling.md/text.md",
+        "text": "step3_scaling.md",
         "verify":"step3_scaling/verify.sh"
       },
       {
         "title": "Delete a Deployment",
-        "text": "step4_delete.md/text.md",
+        "text": "step4_delete.md",
         "verify":"step4_deleting_a_deployment/verify.sh"
       }
     ],
