@@ -1,82 +1,84 @@
 # Adjusting the *yaml* files
 
-One key benefit of having our application definition in *YAML* files is to be able of versioning the files in case of changes. This makes changes or clear and maintainable. 
+One great advantage of defining our application in *YAML* files is the ability to version these configurations when changes are made. This approach ensures that updates are clear, trackable, and easy to maintain.
 
-Let's try to change or existing Application configuration.
+Now, let's explore how we can modify our existing application configuration.
 
 
-## Changing Service Configuration
+## Updating the Service Configuration
 
-Let's switch the port of where our service can be accessed. 
+Let's start by changing the port where our service is accessible.
 
-Currently, that's **8083**.
-`curl $SRVIP:8083`{{exec}}
+Currently, it's set to **8083**. You can confirm this by running: `curl $SRVIP:8083`{{exec}}
 
-Let's adjust the `itsm_service.yml` under `/itsm` to make the service listen on `port` **8084** now.
+To update it, we'll modify the `itsm_service.yml` file in the `/itsm` directory to listen on `port` **8084** instead.
 
 `sed -i 's,port:.*,port: 8084,' itsm_service.yml`{{exec}}
 
->You can print the content of the file to make sure the change really happened. By now, you should now, what and where to look for.
+> **Tip!** You can print the contents of the file to verify the change. By now, you should know what to look for and where to find it.
 
-Let's apply the changed file to our cluster.
-**Executing** `kubectl apply -f itsm_service.yml`{{exec}} should results in: 
+Next, let's apply the updated configuration to our cluster: Running `kubectl apply -f itsm_service.yml`{{exec}} should return:
+
 
 *service/demo-proxy **configured***.
 
+> Now, use the `kubectl` commands you've learned so far to verify the new `port` configuration!
 
->Try to verify the new port with the `kubectl` command(s), you know so far!
-
-Let's check if we can access our service on the new port:
+Let's confirm that we can access the service on the new port:
 
 `curl $SRVIP:8084`{{exec}}
 
-Again, we should see the infamous nginx welcome page.
+You should see the familiar nginx welcome page again.
 
 
-## Changing Deployment Configuration
+## Updating the Deployment Configurations
 
-Now, we'll try to change our deployment. Let's scale down the amount of replicas.
+Now, let's change the deployment by scaling down the number of replicas.
 
->By now, you should be able to get the current amount, using `kubectl`. Try to get the current amount!
+> **Tip!** Use `kubectl` to check the current number of replicas before making changes!
 
+We'll adjust the replica count to **2**: `sed -i 's,replicas:.*,replicas: 2,' itsm_deployment.yaml`{{exec}}
 
-Let's change the replica count to **2**.
-`sed -i 's,replicas:.*,replicas: 2,' itsm_deployment.yaml`{{exec}}
+Apply this change to the cluster: `kubectl apply -f itsm_deployment.yaml`{{exec}}
 
-Now, we apply our change to the cluster:
-`kubectl apply -f itsm_deployment.yaml`{{exec}}
-We should get a response like: *deployment.apps/demo-deployment configured*
+You should see a response like: 
 
-Let's verify the successful change by using 
+```
+deployment.apps/demo-deployment configured
+```
+
+Verify the change by running:
 
 `kubectl get deployments`{{exec}} and `kubectl get pods`{{exec}}
 
-Perfect! We successfully adjusted our deployment.
+Great job! You've successfully updated your deployment.
 
-
-> NOTICE! Depending on the configuration adjustments being done. Sometimes we need to perform an additional command to let the changes take effect: `kubectl rollout restart deployment/demo-deployment`{{exec}}
-
-
+> NOTE! Depending on the type of changes you make, you may need to run an additional command to apply the changes: `kubectl rollout restart deployment/demo-deployment`{{exec}}
 
 ## Challenge 
 
-We've come quite far, **congratulation**!
+Congratulations on reaching this point! 🎉
 
-By now, you should now about how to work with `kubectl`, `deployments`, `services`, and `secrets`. Furthermore, the difference on configuring on the command line as well as using *YAML* files. 
+By now, you should be familiar with using `kubectl`, managing `deployments`, `services`, and `secrets`, and the differences between command-line configuration and *YAML* file usage.
 
-To strengthen your understanding, try the following challenges!
-You can use this environment or start a new one on the **[Kubernetes playground](https://killercoda.com/silent-education/course/kubernetes/kubernetes-playground)**.
+To further solidify your skills, try the following challenges: You can continue in this environment or start fresh in the **[Kubernetes Playground](https://killercoda.com/silent-education/course/kubernetes/kubernetes-playground)**.
 
-### Creating a *itsm-secret.yaml*
+### Challenge 1: Creating a *itsm-secret.yaml*
+
 * Create a `itsm_secret.yaml` object yaml file with the appropriate content.
+
 * Perform a rollout of the secret on the cluster. 
+
 * Retrieve the secret using `kubectl`
 
-### Write your own deployment and service YAML files
+### Challenge 2: Write your own deployment and service YAML files
 
 * search on [*docker.io*](https://hub.docker.com/) for an application to roll out (e.g. tomcat)
-* Write a deployment.yaml and service.yaml file for the application
+
+* Write a *deployment.yaml* and *service.yaml* file for the application
+
 * Perform a rollout of your application on the cluster
+
 * Use `kubectl` to verify all steps and configurations
 
-
+Good luck, and happy deploying! 🚀
