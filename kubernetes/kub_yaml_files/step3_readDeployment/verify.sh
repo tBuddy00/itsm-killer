@@ -1,5 +1,5 @@
-if ! history | grep -q "cat /itsm/itsm_service.yml"; then
-    echo "Error: 'cat /itsm/itsm_service.yml' has not been executed."
+if ! history | grep -q "cat /itsm/itsm_deployment.yaml"; then
+    echo "Error: 'cat /itsm/itsm_deployment.yaml' has not been executed."
     exit 1
 fi
 
