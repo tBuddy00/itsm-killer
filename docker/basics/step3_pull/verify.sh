@@ -1,18 +1,8 @@
-#!/bin/bash
-
-#docker run -it --rm --name hello-world alpine:latest "echo Hello World"
-
-# Prüfen, ob der Befehl ausgeführt wurde
-if ! history | grep -q "docker pull nginx"; then
-    echo "Error: 'docker pull nginx' has not been executed."
+# Checks whether the command was executed -> especially with nginx
+if ! docker images | grep -q "nginx"; then
+    echo "Error: NGINX image has not been pulled."
     exit 1
 fi
 
-# Prüfen, ob der Befehl ausgeführt wurde
-if ! history | grep -q "docker images"; then
-    echo "Error: 'docker images' has not been executed."
-    exit 1
-fi
-
-#Sobald beide Befehle ausgeführt wurden
+#Once all commands have been executed
 exit 0
