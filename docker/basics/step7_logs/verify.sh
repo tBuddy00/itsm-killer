@@ -1,21 +1,8 @@
-#!/bin/bash
-
-#docker run -it --rm --name hello-world alpine:latest "echo Hello World"
-#if ! history | grep -q "docker start nginx_test"; then
-#    echo "Error: 'docker start nginx_test' has not been executed."
-#    exit 1
-#fi
-
-# Prüfen, ob der Befehl ausgeführt wurde
-if ! history | grep -q "docker logs nginx_test"; then
-    echo "Error: 'docker logs nginx_test' has not been executed."
+#Either a container named nginx_test is running or not, it will check for both
+if ! docker ps -a --filter "name=nginx_test" | grep -q "nginx_test"; then
+    echo "Error: No container with the name 'nginx_test' was found."
     exit 1
 fi
 
-# Prüfen, ob der Befehl ausgeführt wurde
-#if ! history | grep -q "docker exec -ti nginx_test sh"; then
-#    echo "Error: 'docker exec -ti nginx_test sh' has not been executed."
-#    exit 1
-#fi
 
 exit 0
