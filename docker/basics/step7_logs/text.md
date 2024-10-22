@@ -1,28 +1,31 @@
-# Inspecting container with docker logs and exec
+# Inspecting container with docker logs and docker exec
 
+## Docker: docker logs
 
-## docker logs
-In the previous step, we learned about docker containers which run *detached*.
-One way to check the output of the container is to use `docker logs <containername>`. 
+In the previous step, we learned how to run Docker containers in *detached* mode. To check the output of a detached container, we can use the `docker logs <containername>` command.
 
-Previously, we created a detached nginx container. Make sure the container is still running by entering `docker ps`{{exec}}. If not, restart the container by entering `docker start nginx_test`{{exec}} or if you can't find it with `docker ps -a`, create it again with for example:
-`docker run -d --name nginx_test -p 8000:80 nginx_test nginx:latest`{{exec}}
+Earlier, we created a detached nginx container. First, ensure that it's still running by using `docker ps`{{exec}}. If the container isn’t running, restart it with `docker start nginx_test`{{exec}}. If you can’t find it at all using `docker ps -a`, you can recreate it with the following command:
 
-Having the running container, we can check the logs with:
-`docker logs nginx_test`{{exec}}
+- `docker run -d --name nginx_test -p 8000:80 nginx:latest`{{exec}}
 
-You should see the output from nginx that typically comes up, when starting the server. 
+Once your container is up and running, you can check its logs by entering:
 
-# docker exec
-Sometimes, we want to inspect certain files within the container. 
-One possibility for that is `docker exec -ti <containername> <command>`.
+- `docker logs nginx_test`{{exec}}
 
-With that we can run commands within the (running!) container. Again, with the -ti flag we can run the command in the foreground. 
+Here, you’ll see the typical output that nginx generates when the server starts up.
 
-That way, we can for example run a `sh`ell inside the container.
-`docker exec -ti nginx_test sh`{{exec}}.
+## Docker: docker exec
 
-As in our exercise with **running containers**, you'll see that the prompt changes (`# `). 
-You're now inside the container and can inpsect it. 
+Sometimes, we need to look inside the container to inspect certain files or run commands. A useful command for this is:
 
-Enter `exit`{{exec}} to close the shell again. 
+- `docker exec -ti <containername> <command>`
+
+This allows us to execute commands inside the running container. The `-ti` flag ensures that the command runs interactively in the foreground.
+
+For example, to open a `sh`ell inside the container, use:
+
+- `docker exec -ti nginx_test sh`{{exec}}
+
+Once you run the command, the terminal prompt will change to `#`, indicating that you're now inside the container. From here, you can inspect or interact with the container just as you would on a normal Linux system.
+
+When you're done, simply type `exit`{{exec}} to close the `sh`ell and return to your host system.

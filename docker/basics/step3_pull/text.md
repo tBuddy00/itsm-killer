@@ -1,22 +1,26 @@
 # Pulling a docker image
 
-The default docker registry is located at [hub.docker.com](https://hub.docker.com). You can use the website to search for programs already provided as docker images.
+The default Docker registry is located at [hub.docker.com](https://hub.docker.com)., where you can search for a wide range of pre-built Docker images.
 
-In order to *download* an image, we can use the `docker pull` command.
+To *download* an image, you can use the `docker pull` command.
 
-As an example, we're looking for a **nginx web server** on [hub.docker.com](https://hub.docker.com). From the site we get the command 
-`docker pull nginx`
+For example, if you’re looking for an **nginx web server**, you can find it on [hub.docker.com](https://hub.docker.com). The command to download this image would be:
 
-Without a prefix, the lookup for the image will default to [hub.docker.com](https://hub.docker.com)
+- `docker pull nginx`{{exec}}
 
-Through that, the following commands are identical in outcome:
-`docker pull nginx`
-`docker pull docker.io/library/nginx`
+When you use this command, it automatically pulls the image from [hub.docker.com](https://hub.docker.com) by default. Therefore, the following commands will produce the same result:
 
-Additionally, it is possible to select a specific version for the image using **tags**.
-As default `:latest` is used. Otherwise you can use [hub.docker.com](https://hub.docker.com) in order to find additional versions. 
+- `docker pull nginx`
 
-Summarizing, to download our wanted nginx image, we can use the command
-`docker pull nginx:latest`{{exec}}
+- `docker pull docker.io/library/nginx`
 
-To verify the successful download, we can run `docker images`{{exec}} and should see the nginx image.
+You can also specify a particular version of an image using **tags**. By default, *image:latest* is used. To find other available versions, you can browse [hub.docker.com](https://hub.docker.com).
+
+To download the *nginx image* with the latest version, you can use:
+
+- `docker pull nginx:latest`{{exec}} (optional)
+
+To check if the image was downloaded successfully, run `docker images`{{exec}}. You should see the *nginx image* listed there.
+
+Feel free to reach out if you have any questions or need further assistance!
+
