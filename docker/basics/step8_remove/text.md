@@ -1,4 +1,4 @@
-# Removing docker container and images
+# Removing docker container and docker images
 
 When working with Docker containers, it’s easy for the number of containers to grow quickly. By now, you might already see a few containers listed when you run `docker ps`{{exec}}.
 
@@ -10,13 +10,13 @@ There are several commands that will help you with the housekeeping.
 
 One useful option is to create temporary containers that automatically remove themselves when they stop. You can do this directly when you `run` a container. For example:
 
-`docker run -d --rm --name nginx_fluct nginx:latest`{{exec}}
+- `docker run -d --rm --name nginx_fluct nginx:latest`{{exec}}
 
 Here, the `--rm` flag ensures that the container is automatically removed as soon as it stops. This is perfect for containers that you only need for a short period. 
 
 After running this command, you can see the container in action with
 
-`docker ps`{{exec}}
+- `docker ps`{{exec}}
 
 Now, let’s stop the container with: `docker stop nginx_fluct`{{exec}}
 
@@ -30,15 +30,15 @@ If you want to clean up specific containers that are no longer needed, you can r
 
 The command for that is:
 
-`docker rm <containername>`{{exec}}
+- `docker rm <containername>`{{exec}}
 
 Let’s try it with the *nginx_test* container from our previous exercises. First, ensure that the container is stopped:
 
-`docker stop nginx_test`{{exec}}
+- `docker stop nginx_test`{{exec}}
 
 Then, **remove** the container with:
 
-`docker rm nginx_test`{{exec}}
+- `docker rm nginx_test`{{exec}}
 
 You can verify that it’s been removed by running `docker ps`{{exec}}.
 
@@ -48,24 +48,22 @@ Over time, working with Docker can lead to a lot of unused data piling up, like 
 
 To perform a global cleanup, we can use:
 
-`docker system prune -a`{{exec}}
+- `docker system prune -a`{{exec}}
 
 This command will remove:
 
-* Stopped containers
+- Stopped containers
 
-* Docker images that aren’t associated with any containers
+- Docker images that aren’t associated with any containers
 
-* Unused networks
+- Unused networks
 
-* Unassociated volumes
+- Unassociated volumes
 
 First, stop any remaining active containers by using `docker stop <containername>`{{exec}}. Then, run the global cleanup with:
 
-`docker system prune -a`{{exec}}
+- `docker system prune -a`{{exec}}
 
 If asked for *confirmation*, type `y` to proceed.
 
 Afterward, if you run `docker ps`{{exec}} and `docker images`{{exec}}, both tables should be **empty** again, showing that everything unnecessary has been cleaned up.
-
-Before clicking on check, please make sure to run `docker ps`{{exec}} and `docker stop nginx_fluct`{{exec}}.
