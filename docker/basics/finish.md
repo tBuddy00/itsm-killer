@@ -1,6 +1,7 @@
 # You finished this Scenario.
 
-Alright, Congratulations!
-Now, you should have a basic understanding on how to work with docker images.
+Great job, congratulations! 🎉
 
-Use a docker playground available on this site, to experiment with the shown commands at your own pace.
+By now, you should have a solid foundation on how to work with Docker images and containers.
+
+Feel free to explore and experiment with the commands we’ve covered using a Docker playground on this site—take your time and practice at your own pace. Have fun diving deeper into Docker!

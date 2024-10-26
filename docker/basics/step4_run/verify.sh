@@ -1,37 +1,10 @@
-#!/bin/bash
-
-<<<<<<< HEAD
-#docker run -it --rm --name hello-world alpine:latest "echo Hello World"
-=======
-#docker run -it --rm --name hello-world alpine:latest "echo Hello World"
-
-
-# Prüfen, ob der Befehl ausgeführt wurde
-if ! history | grep -q "docker run -it alpine:latest sh"; then
-    echo "Error: 'docker run -it alpine:latest sh' has not been executed."
-    exit 1
-fi
-
-# Prüfen, ob der Befehl ausgeführt wurde
-if ! history | grep -q "hostname"; then
-    echo "Error: 'hostname' has not been executed."
-    exit 1
-fi
-
-# Prüfen, ob der Befehl ausgeführt wurde
-if ! history | grep -q "docker run -it --rm python:3-alpine python -c "print('hello');""; then
-    echo "Error: "'docker run -it --rm python:3-alpine python -c "print('hello');'" has not been executed."
+# Checks whether the command was executed -> searching for alpine:latest container and if it is running
+if ! docker ps --filter "ancestor=alpine:latest" --filter "status=running" | grep -q "alpine:latest"; then
+    echo "Error: No running container with the image 'alpine:latest' was found."
     exit 1
 fi
 
 
-# Prüfen, ob der Befehl ausgeführt wurde
-if ! history | grep -q "docker run -d --rm python:3-alpine python -c "print('hello');""; then
-    echo "Error: "'docker run -d --rm python:3-alpine python -c "print('hello');'" has not been executed."
-    exit 1
-fi
 
-
-#Sobald alle Befehle ausgeführt wurden
+# Once all commands have been executed
 exit 0
->>>>>>> 08c58a3 (adding in 'index.json' backend in 'git-basics')
