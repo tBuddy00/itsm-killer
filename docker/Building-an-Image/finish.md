@@ -1,4 +1,3 @@
-# You finished this Scenario.
+Farewell 🌟
 
-Alright, Congratulations!
-Now, you should've a basic understanding of building your own docker images.
+You did it—congratulations on finishing the Docker: Building an Image section! 🎈 You now have all the skills you need to create, customize, and share Docker images confidently. We’re so proud of your progress and hope you enjoyed the journey as much as we did! Remember, keep practicing and don’t hesitate to explore even more in the world of Docker. Good luck, and keep building amazing things! ✨
