@@ -1,6 +1,6 @@
 {
-  "title": "Building docker images",
-  "description": "This scenario is about Building your own docker images.",
+  "title": "Building Docker Images",
+  "description": "This scenario is about creating our own Dockerfile, building an image and pushing it to DockerHub.",
   "backend": {
     "imageid": "ubuntu"
   },
@@ -11,9 +11,19 @@
     },
     "steps": [
       {
-        "title": "Running the first command",
-        "text": "step1_version/text.md",
-        "verify": "step1_version/verify.sh"
+        "title": "Creating our first Dockerfile",
+        "text": "step1_dockerfile/text.md",
+        "verify": "step1_dockerfile/verify.sh"
+      },
+      {
+        "title": "Building our Dockerfile",
+        "text": "step2_build/text.md",
+        "verify": "step2_build/verify.sh"
+      },
+      {
+        "title": "Pushing our image to DockerHub",
+        "text": "step3_dockerhub/text.md",
+        "verify": "step3_dockerhub/verify.sh"
       }
     ],
     "finish": {
