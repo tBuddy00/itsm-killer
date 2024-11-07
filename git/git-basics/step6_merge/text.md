@@ -55,5 +55,3 @@ To view the merge history use:
 `git log --oneline --graph --decorate`{{exec}}
 
 This command provides a visual representation of your commit history, showing how the branches were merged.
-
-Before clicking on Check, please make sure to use `git switch main`{{exec}} and `git merge my-first-branch`{{exec}}.
