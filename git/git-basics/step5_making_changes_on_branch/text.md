@@ -35,6 +35,3 @@ After you’ve finished your work on the new branch, you’ll often want to retu
 **Switch back to `main`:** To switch back to the `main` branch (or any other branch), we will use `git switch main`{{exec}}.
 
 **Finally:** Checking our file status after a commit with `git status`{{exec}} is always an good idea!
-
-Before clicking on Check, please make sure to run `echo "This is a new feature." >> hello.txt`{{exec}}.
-
